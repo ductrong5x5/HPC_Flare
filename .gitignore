@@ -1,0 +1,20 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environment
+env/
+python_env/
+
+# Hugging Face / model cache
+model/
+hf_home/
+
+# Logs and experiments
+logs/
+example/
+
+# System files
+.DS_Store
+
+NVFlare/.git
