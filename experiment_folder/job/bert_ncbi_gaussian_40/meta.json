@@ -1,0 +1,10 @@
+{
+  "name": "bert_ncbi_gaussian_40",
+  "resource_spec": {},
+  "deploy_map": {
+    "app": [
+      "@ALL"
+    ]
+  },
+  "min_clients": 40
+}
