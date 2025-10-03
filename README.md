@@ -1,5 +1,7 @@
 Step1: Create python-env or conda-env and doing setup
 ---
+[Watch the video](https://drive.google.com/file/d/1HjGJdOqxDDL2icyvik8pgcdR2tgt3xFA/view?usp=sharing)
+
 - Get this repo with git clone `git clone git@github.com:ductrong5x5/HPC_Flare.git`
     ```
     cd HPC_Flare/
