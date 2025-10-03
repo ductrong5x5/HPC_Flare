@@ -2,9 +2,9 @@
 # ===== SLURM Configuration =====
 #SBATCH --job-name=test_nvflare
 #SBATCH -A csc666
-#SBATCH --qos=debug 
+#SBATCH --qos=normal 
 #SBATCH --partition=batch
-#SBATCH --time=00:05:00
+#SBATCH --time=00:30:00
 #SBATCH --output=logs/slurm_%j.out
 #SBATCH --error=logs/slurm_%j.err
 #SBATCH --nodes=2
@@ -73,7 +73,7 @@ esac
 SERVER_READY_FILE="/tmp/server_ready_${SLURM_JOB_ID}.flag"
 rm -f "$SERVER_READY_FILE"
 
-srun --ntasks=1 --nodes=1 --exclusive --cpus-per-task=7 setup.sh $NAME frontier server $GPU_COUNT $MEM_EACH_GPU "$SERVER_READY_FILE" &
+srun --ntasks=1 --nodes=1  --cpus-per-task=1 setup.sh $NAME frontier server $GPU_COUNT $MEM_EACH_GPU "$SERVER_READY_FILE"  &
 
 echo "Waiting for server to signal readiness..."
 while [ ! -f "$SERVER_READY_FILE" ]; do
@@ -81,8 +81,9 @@ while [ ! -f "$SERVER_READY_FILE" ]; do
 done
 echo "Server is ready. Starting client srun..."
 # ===== Launch clients =====
-srun --ntasks=$NUM_CLIENTS --nodes=1 --ntasks-per-node=$CLIENTS_PER_NODE --gpus-per-task=1 --gpus-per-node=8 --gpu-bind=closest --cpus-per-task=7 --exclusive setup.sh $NAME frontier client &
-
+#8 clients per node, 1 gpu per clients
+srun --ntasks=$NUM_CLIENTS --nodes=1 --ntasks-per-node=$CLIENTS_PER_NODE --gpus-per-task=1  --gpu-bind=closest setup.sh $NAME frontier client &
+ 
 # # ===== Post-processing =====
 sleep 60s
 echo "All NVFlare tasks completed. Running post-processing script..." 

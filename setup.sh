@@ -8,19 +8,14 @@ echo "Running $ROLE on $(hostname) [rank: $RANK]"
 
 case "$ROLE" in
   server)
-    echo "RANK: $RANK is setting up...."
+    echo "Rank $RANK is setting up server..."
 
-    # Help function
+    # Help option
     if [[ "${1:-}" == "--help" || "${1:-}" == "-h" ]]; then
         cat <<EOF
+Usage: $0 <example_name> <system_name> [role] [extra args...]
 
-=================================================
- Help Documentation
-=================================================
-
-Usage: $0 <example_name> <system_name>
-Example: $0 cifar10 frontier
-
+Example: $0 cifar10 frontier server
 EOF
         exit 0
     fi
@@ -31,37 +26,25 @@ EOF
         exit 1
     fi
 
-    ####################################
-    # Setup directories (fast)
-    ####################################
-    EXAMPLE_DIR="example"
-    JOB_DIR="$EXAMPLE_DIR/$SLURM_JOB_NAME"
-    EXAMPLE_SUBDIR="$JOB_DIR/$1"
-    SYSTEM_SUBDIR="$EXAMPLE_SUBDIR/$2"
-
-    echo "📂 Creating folder structure under: $SYSTEM_SUBDIR"
+    # Setup directories
+    JOB_DIR="example/$SLURM_JOB_NAME"
+    SYSTEM_SUBDIR="$JOB_DIR/$1/$2"
     mkdir -p "$SYSTEM_SUBDIR"
 
-    ####################################
-    # Run admin setup in parallel
-    ####################################
-    echo "🔧 Running admin setup..."
-    # bash "admin_new.sh" "$SYSTEM_SUBDIR" "${4:-}" "${5:-}" "${6:-}" &
+    # Run admin setup in background
     bash admin_new.sh "$SYSTEM_SUBDIR" "${4:-}" "${5:-}" "${6:-}" &
 
-    ####################################
-    # Start server
-    ####################################
+    # Start server after setup
     wait
-    bash "start.sh" server
+    bash start.sh server
     ;;
   
   client)
-    bash "start.sh" client "${4:-}"
+    bash start.sh client "${4:-}"
     ;;
 
   *)
-    echo " Unknown role: $ROLE (expected server|client)"
+    echo "Unknown role: $ROLE (expected server|client)"
     exit 1
     ;;
 esac

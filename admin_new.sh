@@ -5,7 +5,7 @@ echo
 echo "======================================================================"
 echo " Admin Script Setup (Multiprocess Optimized)"
 echo "======================================================================"
-echo 
+echo
 
 EXAMPLE_SUBDIR=$1
 NUM_GPUS=$2
@@ -18,16 +18,12 @@ if [ -z "$EXAMPLE_SUBDIR" ] || [ -z "$NUM_GPUS" ] || [ -z "$MEM_PER_GPU" ]; then
     exit 1
 fi
 
-echo " Using example directory: $EXAMPLE_SUBDIR"
 mkdir -p "$EXAMPLE_SUBDIR"
-
 PARENT_DIR=$(dirname "$EXAMPLE_SUBDIR")
 cd "$PARENT_DIR" || exit 1
 
 # Show IPv4
-echo "=====> Finding IP Address"
 ip -4 a | grep "inet"
-echo
 
 # Load environment modules
 module load PrgEnv-gnu/8.5.0
@@ -35,13 +31,11 @@ module load miniforge3/23.11.0-0
 module load rocm/5.6.0
 module load craype-accel-amd-gfx90a
 
-# echo "Using Conda env: $CONDA_ENV_NAME"
-# export PATH="${CONDA_ENV_PATH}/bin:$PATH"
-# source activate "${CONDA_ENV_PATH}"
-source $LOCATION/python_env/env/bin/activate
+# Activate Conda
+source "$LOCATION/python_env/env/bin/activate"
 
 # Create & modify project.yml
-echo "=====> Creating & Modifying project.yml"
+echo "Creating & modifying project.yml"
 echo "2" | nvflare provision
 PROJECT_YML="project.yml"
 server_name=$(hostname)
@@ -65,17 +59,14 @@ p_c=${p_c:-8002}
 p_a=${p_a:-8003}
 sed -i -e "s/8002/$p_c/" -e "s/8003/$p_a/" "$PROJECT_YML"
 
-# Provision again
 nvflare provision -p project.yml
 
-# chmod *.sh in parallel
-echo "=====> Setting Execute Permissions"
+# Set execute permissions in parallel
 find . -type f -name "*.sh" -print0 | xargs -0 -P"$MAX_PROCS" chmod +x
 
 # Remove '&' from startup scripts
-echo "=====> Fixing startup.sh"
 sed -i 's|^[[:space:]]*\$DIR/sub_start\.sh[[:space:]]*&[[:space:]]*$|  $DIR/sub_start.sh|' \
-  "workspace/test/prod_00/$server_name/startup/start.sh"
+    "workspace/test/prod_00/$server_name/startup/start.sh"
 
 for i in $(seq 1 ${Total_clients:-0}); do
     CLIENT_NAME="site-$i"
@@ -83,27 +74,22 @@ for i in $(seq 1 ${Total_clients:-0}); do
       "workspace/test/prod_00/$CLIENT_NAME/startup/start.sh"
 done
 
-# Copy workspace (parallelized)
-echo "=====> Copying project folders"
+# Copy workspace folders in parallel
 TARGET_DIR=$(basename "$EXAMPLE_SUBDIR")
 printf "%s\n" \
   "workspace/test/prod_00/admin@ornl.gov" \
   "workspace/test/prod_00/$server_name" \
   $(seq 1 ${Total_clients:-0} | sed "s|^|workspace/test/prod_00/site-|") \
   | xargs -n1 -P"$MAX_PROCS" -I{} cp -r {} "$TARGET_DIR"
-echo " Project folder copied."
 
 # Copy Job Folder
-echo "=====> Copy Job Folder"
 cp -r "$JOB_FOLDER" "frontier/admin@ornl.gov/transfer/"
 
-# Copy PT to Server and Clients (parallelized)
-echo "=====> Copy custom code"
-ls -d $SYSTEM_NAME/* | xargs -n1 -P"$MAX_PROCS" -I{} cp -r "$JOB_FOLDER/../../code/custom" {}
+# Copy custom code
+ls -d "$SYSTEM_NAME"/* | xargs -n1 -P"$MAX_PROCS" -I{} cp -r "$JOB_FOLDER/../../code/custom" {}
 
-# GPU resources setup (parallelized)
-echo "=====> Updating GPU resources"
-ls -d $SYSTEM_NAME/site-*/local | xargs -n1 -P"$MAX_PROCS" -I{} bash -c '
+# Update GPU resources in parallel
+ls -d "$SYSTEM_NAME"/site-*/local | xargs -n1 -P"$MAX_PROCS" -I{} bash -c '
   dir="{}"
   if [ -d "$dir" ]; then
     jq ".components |= map(if .id == \"resocurce_manager\" 
@@ -114,78 +100,52 @@ ls -d $SYSTEM_NAME/site-*/local | xargs -n1 -P"$MAX_PROCS" -I{} bash -c '
   fi
 '
 
-# comm_config.json
-cat > comm_config.json <<'EOF'
-{ "use_aio_grpc": true }
-EOF
-ls -d $SYSTEM_NAME/*/local | xargs -n1 -P"$MAX_PROCS" -I{} cp comm_config.json {}
+# Copy comm_config.json to all local directories
+echo '{ "use_aio_grpc": true }' > comm_config.json
+ls -d "$SYSTEM_NAME"/*/local | xargs -n1 -P"$MAX_PROCS" -I{} cp comm_config.json {}
 
-# Max clients
+# Update max clients on server
 SERVER_DIR="$SYSTEM_NAME/$server_name/local"
 if [ -f "$SERVER_DIR/resources.json.default" ]; then
     sed 's/"max_num_clients": 100/"max_num_clients": 1000/' \
         "$SERVER_DIR/resources.json.default" > "$SERVER_DIR/resources.json"
 fi
 
-#===== Setting log level =====
+# Set log level
 case "${LOG_LEVEL:-INFO}" in
   DEBUG_CLIENT)
-    echo "🔧 Applying DEBUG log level to clients only..."
     for dir in "$SYSTEM_NAME"/site-*/local; do
-        if [ -d "$dir" ]; then
-            cp "$dir/log_config.json.default" "$dir/log_config.json"
-            jq --arg LEVEL "DEBUG" '
-              .handlers |= with_entries(.value.level = $LEVEL)
-              | .loggers.root.level = $LEVEL
-            ' "$dir/log_config.json" > "$dir/log_config_tmp.json" \
-              && mv "$dir/log_config_tmp.json" "$dir/log_config.json"
-            echo "✅ Updated log_config.json in $dir"
-        fi
+        [ -d "$dir" ] || continue
+        cp "$dir/log_config.json.default" "$dir/log_config.json"
+        jq --arg LEVEL "DEBUG" '.handlers |= with_entries(.value.level=$LEVEL) | .loggers.root.level=$LEVEL' \
+           "$dir/log_config.json" > "$dir/log_config_tmp.json" && mv "$dir/log_config_tmp.json" "$dir/log_config.json"
     done
     ;;
   DEBUG_SERVER)
-    echo "🔧 Applying DEBUG log level to server only..."
-    cp "$SYSTEM_NAME/$server_name/local/log_config.json.default" "$SYSTEM_NAME/$server_name/local/log_config.json"
-    jq --arg LEVEL "DEBUG" '
-      .handlers |= with_entries(.value.level = $LEVEL)
-      | .loggers.root.level = $LEVEL
-    ' "$SYSTEM_NAME/$server_name/local/log_config.json" > "$SYSTEM_NAME/$server_name/local/log_config_tmp.json" \
-      && mv "$SYSTEM_NAME/$server_name/local/log_config_tmp.json" "$SYSTEM_NAME/$server_name/local/log_config.json"
-    echo "✅ Updated log_config.json for server: $server_name"
+    cp "$SERVER_DIR/log_config.json.default" "$SERVER_DIR/log_config.json"
+    jq --arg LEVEL "DEBUG" '.handlers |= with_entries(.value.level=$LEVEL) | .loggers.root.level=$LEVEL' \
+       "$SERVER_DIR/log_config.json" > "$SERVER_DIR/log_config_tmp.json" && mv "$SERVER_DIR/log_config_tmp.json" "$SERVER_DIR/log_config.json"
     ;;
   DEBUG_ALL)
-    echo "🔧 Applying DEBUG log level to both clients and server..."
     for dir in "$SYSTEM_NAME"/site-*/local; do
-        if [ -d "$dir" ]; then
-            cp "$dir/log_config.json.default" "$dir/log_config.json"
-            jq --arg LEVEL "DEBUG" '
-              .handlers |= with_entries(.value.level = $LEVEL)
-              | .loggers.root.level = $LEVEL
-            ' "$dir/log_config.json" > "$dir/log_config_tmp.json" \
-              && mv "$dir/log_config_tmp.json" "$dir/log_config.json"
-            echo "✅ Updated log_config.json in $dir"
-        fi
+        [ -d "$dir" ] || continue
+        cp "$dir/log_config.json.default" "$dir/log_config.json"
+        jq --arg LEVEL "DEBUG" '.handlers |= with_entries(.value.level=$LEVEL) | .loggers.root.level=$LEVEL' \
+           "$dir/log_config.json" > "$dir/log_config_tmp.json" && mv "$dir/log_config_tmp.json" "$dir/log_config.json"
     done
-    cp "$SYSTEM_NAME/$server_name/local/log_config.json.default" "$SYSTEM_NAME/$server_name/local/log_config.json"
-    jq --arg LEVEL "DEBUG" '
-      .handlers |= with_entries(.value.level = $LEVEL)
-      | .loggers.root.level = $LEVEL
-    ' "$SYSTEM_NAME/$server_name/local/log_config.json" > "$SYSTEM_NAME/$server_name/local/log_config_tmp.json" \
-      && mv "$SYSTEM_NAME/$server_name/local/log_config_tmp.json" "$SYSTEM_NAME/$server_name/local/log_config.json"
-    echo "✅ Updated log_config.json for server: $server_name"
+    cp "$SERVER_DIR/log_config.json.default" "$SERVER_DIR/log_config.json"
+    jq --arg LEVEL "DEBUG" '.handlers |= with_entries(.value.level=$LEVEL) | .loggers.root.level=$LEVEL' \
+       "$SERVER_DIR/log_config.json" > "$SERVER_DIR/log_config_tmp.json" && mv "$SERVER_DIR/log_config_tmp.json" "$SERVER_DIR/log_config.json"
     ;;
   INFO|"")
-    echo "ℹ️ LOG_LEVEL=$LOG_LEVEL → leaving log_config.json unchanged"
+    echo "LOG_LEVEL=$LOG_LEVEL → leaving log_config.json unchanged"
     ;;
   *)
-    echo "⚠️ Unknown LOG_LEVEL=$LOG_LEVEL, expected INFO | DEBUG_CLIENT | DEBUG_SERVER | DEBUG_ALL"
+    echo "Unknown LOG_LEVEL=$LOG_LEVEL (expected INFO | DEBUG_CLIENT | DEBUG_SERVER | DEBUG_ALL)"
     ;;
 esac
 
-echo "==================================================="
-echo "✅ Multiprocess Setup Completed!"
-echo "==================================================="
+echo "Multiprocess Setup Completed."
 
-if [ -n "$READY_FILE" ]; then
-    touch "$READY_FILE"
-fi
+# Signal ready file if provided
+[ -n "$READY_FILE" ] && touch "$READY_FILE"

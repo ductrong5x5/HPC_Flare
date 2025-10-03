@@ -1,16 +1,5 @@
 #!/bin/bash
 
-# Print basic Slurm info
-echo " Running on host: $(hostname)"
-echo " SLURM_PROCID: ${SLURM_PROCID}"
-echo " SLURM_NTASKS: ${SLURM_NTASKS}"
-echo " EXAMPLE_NAME: ${EXAMPLE_NAME}"
-echo " SYSTEM_NAME: ${SYSTEM_NAME}"
-echo
-
-# Print list of nodes allocated
-echo " SLURM_NODELIST: ${SLURM_NODELIST}"
-echo " Nodes allocated to t8s job:"
 module load PrgEnv-gnu/8.5.0
 module load miniforge3/23.11.0-0
 module load rocm/5.6.0
@@ -26,9 +15,7 @@ system_name="${SYSTEM_NAME}"
 Client_per_GPU="${CLIENTS_PER_GPU}"
 BASE_DIR="${LOCATION}/example/${SLURM_JOB_NAME}/${example_name}/${system_name}"
 PARENT_DIR=$(dirname "$BASE_DIR")
-echo "BASE_DIR: $BASE_DIR"
-echo "PARENT_DIR: $PARENT_DIR"
-echo
+
 
 # Check BASE_DIR
 if [ ! -d "$BASE_DIR" ]; then
