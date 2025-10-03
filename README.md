@@ -1,25 +1,33 @@
 Step1: Create python-env or conda-env and doing setup
 ---
-- `cd python_env/`
-- `python -m venv env`
-- `source env/bin/activate`
-- `pip install seaborn pandas transformers seqeval tensorboard tensorflow`
-- `cd ..`
-- `pip install -e ./NVFlare/`
-- `pip install -e ./PETINA/`
+- Get this repo with git clone `git clone git@github.com:ductrong5x5/HPC_Flare.git`
+    ```
+    cd HPC_Flare/
+    cd python_env/
+    python -m venv env
+    source env/bin/activate
+    pip install seaborn pandas transformers seqeval tensorboard tensorflow
+    cd ..
+    pip install -e ./NVFlare/
+    pip install -e ./PETINA/
+    ```
 - Depend on your system, you can install the Pytorch module of Rocm that you want. I installed the pytorch rocm 5.6
-- `pip install torch==2.2.0 torchvision==0.17.0 torchaudio==2.2.0 --index-url https://download.pytorch.org/whl/rocm5.6`
+```
+pip install torch==2.2.0 torchvision==0.17.0 torchaudio==2.2.0 --index-url https://download.pytorch.org/whl/rocm5.6
+```
 - You can access `/python_env/requirements.txt` to look at my env to compare.
 - Inside this NVFlare already change the gpu_utils to what we are using. You can take a look at `NVFlare/nvflare/fuel/utils/gpu_utils.py`
 
 Step2: download model and dataset
 ---
 Since I have limitation in my home folder, so I choose the  hugging face folder in another place
-- export HF_HOME="./hf_home"
-- export HF_HUB_DISABLE_TELEMETRY=1
-- mkdir -p "$HF_HOME"
-- mkdir model
-- python download_model.py
+```
+export HF_HOME="./hf_home"
+export HF_HUB_DISABLE_TELEMETRY=1
+mkdir -p "$HF_HOME"
+mkdir model
+python download_model.py
+```
 - If you download the model, it will look like this
 ![Download model](./resource/1.png)
 - Dataset can be found at `experiment_folder/data/nlp-ner`
@@ -65,6 +73,9 @@ Step4: submit slurm job
     done
     ```
 - `python start_admin.py` will start the NVFlare job
+- start the job with `sbatch slurm_debug_new.slurm`
+- If do correctly, there will we only 1 GPU run for 8 clients
+![GPU using](./resource/2.png)
 
 Step5: Multiple node case - Internode
 ---
