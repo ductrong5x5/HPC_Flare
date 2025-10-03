@@ -14,7 +14,7 @@
 
 import gc
 from typing import Any
-
+import os
 from nvflare.apis.client import Client
 from nvflare.apis.controller_spec import ClientTask, OperatorMethod, Task, TaskOperatorKey
 from nvflare.apis.fl_constant import ReturnCode
@@ -150,7 +150,9 @@ class ScatterAndGather(Controller):
     def start_controller(self, fl_ctx: FLContext) -> None:
         self.log_info(fl_ctx, "Initializing ScatterAndGather workflow.")
         self._phase = AppConstants.PHASE_INIT
-
+        # Uncomment 2 lines below to make it cpu core binding to 1 core
+        # pid = os.getpid()
+        # os.sched_setaffinity(pid, {2})
         self.aggregator = self._engine.get_component(self.aggregator_id)
         if not isinstance(self.aggregator, Aggregator):
             self.system_panic(

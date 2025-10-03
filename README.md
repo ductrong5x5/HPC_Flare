@@ -123,6 +123,11 @@ Step6: Intranode - multiple clients in one node
     - setup HF `export HF_HOME=$LOCATION/hf_home`
     - `export HF_HUB_DISABLE_TELEMETRY=1`
     - Then run `./1_setup_intranode.sh` to update client data path
+    - Since we can't bind cpu core like we did with srun, we can uncomment 2 lines in `NVFlare/nvflare/app_common/workflows/scatter_and_gather.py`.
+    ```
+    pid = os.getpid()
+    os.sched_setaffinity(pid, {2})
+    ```
     - Then we start the server with `./example_intranode/localhost/startup/start.sh`
     - If HPC require load rocm module, make sure do it here. In my case, I do `module load rocm/5.6.0`
     - Then we can run `./2_run_client.sh` to run number of clients. Enter the number of clients based on the job. In this case, enter `8`
