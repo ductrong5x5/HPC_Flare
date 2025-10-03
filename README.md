@@ -33,6 +33,7 @@ Step3: Edit the slurm file
 - copy path and put to `LOCATION`
 
 Step4: submit slurm job
+---
 - before submit slurm job, there are some variable that need to change based on the system
 - in `slurm_debug_new.slurm`, feel free to change `#SBATCH --job-name=test_nvflare`
 - my project is `csc666` so I need to put it there.
@@ -66,6 +67,7 @@ Step4: submit slurm job
 - `python start_admin.py` will start the NVFlare job
 
 Step5: Multiple case
+---
 - Case 8 clients multiple node (default)
 - Case 16 clients multiple node
     - Change `#SBATCH --nodes=3`
