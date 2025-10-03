@@ -1,0 +1,20 @@
+2025-10-02 23:28:54,200 - CoreCell - INFO - site-46: created backbone external connector to grpc://localhost:8002
+2025-10-02 23:28:54,200 - ConnectorManager - INFO - 1252015: Try start_listener Listener resources: {'secure': False, 'host': 'localhost'}
+2025-10-02 23:28:54,201 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connector [CH00002 PASSIVE tcp://0:21881] is starting
+2025-10-02 23:28:54,702 - CoreCell - INFO - site-46: created backbone internal listener for tcp://localhost:21881
+2025-10-02 23:28:54,702 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connector [CH00001 ACTIVE grpc://localhost:8002] is starting
+2025-10-02 23:28:54,703 - FederatedClient - INFO - Wait for engine to be created.
+2025-10-02 23:28:54,712 - nvflare.fuel.f3.drivers.grpc_driver.GrpcDriver - INFO - created secure channel at localhost:8002
+2025-10-02 23:28:54,712 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00002 N/A => localhost:8002] is created: PID: 1252015
+2025-10-02 23:28:55,027 - CoreCell - WARNING - [ME=site-46 O=? D=server F=? T=? CH=task TP=challenge SCH=? STP=? SEQ=?] no connection to server
+2025-10-02 23:28:55,028 - CoreCell - ERROR - [ME=site-46 O=site-46 D=server F=site-46 T=server CH=task TP=challenge SCH=? STP=? SEQ=?] cannot send to 'server': target_unreachable
+2025-10-02 23:28:55,028 - Communicator - INFO - challenge result: target_unreachable 
+2025-10-02 23:28:55,028 - Communicator - INFO - re-challenge after 2.0 seconds
+2025-10-02 23:28:57,034 - Communicator - INFO - challenge result: ok 
+2025-10-02 23:28:57,035 - Communicator - INFO - verified server identity 'localhost'
+2025-10-02 23:28:57,084 - Communicator - INFO - sent identity info for client site-46
+2025-10-02 23:28:57,084 - Communicator - INFO - Trying to register with server ...
+2025-10-02 23:28:57,090 - Communicator - INFO - register RC: ok
+2025-10-02 23:28:57,090 - FederatedClient - INFO - Successfully registered client:site-46 for project test. Token:d2f43be3-d1b0-4d87-8b33-ad8d519654f8 SSID:ebc6125d-0a56-4688-9b08-355fe9e4d61a
+2025-10-02 23:28:57,092 - FederatedClient - INFO - Got engine after 2.388829469680786 seconds
+2025-10-02 23:28:57,093 - FederatedClient - INFO - Got the new primary SP: grpc://localhost:8002

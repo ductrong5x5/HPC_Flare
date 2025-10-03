@@ -1,0 +1,16 @@
+2025-10-02 23:28:51,877 - CoreCell - INFO - site-27: created backbone external connector to grpc://localhost:8002
+2025-10-02 23:28:51,878 - ConnectorManager - INFO - 1251941: Try start_listener Listener resources: {'secure': False, 'host': 'localhost'}
+2025-10-02 23:28:51,879 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connector [CH00002 PASSIVE tcp://0:24456] is starting
+2025-10-02 23:28:52,380 - CoreCell - INFO - site-27: created backbone internal listener for tcp://localhost:24456
+2025-10-02 23:28:52,381 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connector [CH00001 ACTIVE grpc://localhost:8002] is starting
+2025-10-02 23:28:52,382 - FederatedClient - INFO - Wait for engine to be created.
+2025-10-02 23:28:52,394 - nvflare.fuel.f3.drivers.grpc_driver.GrpcDriver - INFO - created secure channel at localhost:8002
+2025-10-02 23:28:52,394 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00002 N/A => localhost:8002] is created: PID: 1251941
+2025-10-02 23:28:52,776 - Communicator - INFO - challenge result: ok 
+2025-10-02 23:28:52,777 - Communicator - INFO - verified server identity 'localhost'
+2025-10-02 23:28:52,819 - Communicator - INFO - sent identity info for client site-27
+2025-10-02 23:28:52,819 - Communicator - INFO - Trying to register with server ...
+2025-10-02 23:28:52,824 - Communicator - INFO - register RC: ok
+2025-10-02 23:28:52,824 - FederatedClient - INFO - Successfully registered client:site-27 for project test. Token:32be9796-78cd-44b6-8f3d-30e004eddaa7 SSID:ebc6125d-0a56-4688-9b08-355fe9e4d61a
+2025-10-02 23:28:52,828 - FederatedClient - INFO - Got engine after 0.4463541507720947 seconds
+2025-10-02 23:28:52,828 - FederatedClient - INFO - Got the new primary SP: grpc://localhost:8002

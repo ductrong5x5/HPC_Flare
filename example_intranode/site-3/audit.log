@@ -1,0 +1,22 @@
+[E:3c4daf45-f4c6-4189-a439-9c48dc0b0b91][T:2025-10-02 23:38:17.842988][U:admin@ornl.gov][A:train.deploy]
+[E:4a7ca4a3-9344-4b24-9e37-cad70cf8a3ac][T:2025-10-02 23:38:20.880775][U:][A:train.start_job]
+[E:8723b6a8-b78a-429b-8fb9-3550bf210f6a][T:2025-10-02 23:38:37.225655][U:][A:train.notify_job_status]
+[E:5110a681-a79f-47a0-926f-598aff5e8fc4][R:64f0d28c-0530-4b82-bca6-988c5c78820a][T:2025-10-02 23:39:15.246730][J:f4b93d37-24b6-495e-b958-72a111c2f55c][A:train#36c5e52e-f984-4135-9eba-dff5eab52a4f]received task from server
+[E:5aa8893a-fd2f-4702-9167-b043c58eaa1e][T:2025-10-02 23:39:15.247182][J:f4b93d37-24b6-495e-b958-72a111c2f55c][A:train#36c5e52e-f984-4135-9eba-dff5eab52a4f]invoked executor LearnerExecutor
+[E:2d28d674-9b90-4f3d-a4c2-94c93fcbd1da][T:2025-10-02 23:42:55.560315][U:admin@ornl.gov][A:train.deploy]
+[E:c57d1e95-1b8a-4ee5-9624-db31315d8083][T:2025-10-02 23:42:58.603147][U:][A:train.start_job]
+[E:e52bb196-405b-4bb4-8e9a-f69c3b44926b][T:2025-10-02 23:43:11.673058][U:][A:train.notify_job_status]
+[E:84277ccd-32d7-4fc5-a897-1dd39ccb8318][R:1bd908a1-cc63-43ae-a3b4-e31b3d973dae][T:2025-10-02 23:43:20.048659][J:de67ee28-8498-461e-a0c5-bf788cf7c9fe][A:train#89fc379f-fc66-43cf-ab18-44b818b6d3e6]received task from server
+[E:0ebbe9df-3731-48b6-a511-8d306ef628bf][T:2025-10-02 23:43:20.049065][J:de67ee28-8498-461e-a0c5-bf788cf7c9fe][A:train#89fc379f-fc66-43cf-ab18-44b818b6d3e6]invoked executor LearnerExecutor
+[E:bb7f6cfb-b4ec-4de7-b0aa-43c80ef2ef72][T:2025-10-02 23:44:33.909288][J:de67ee28-8498-461e-a0c5-bf788cf7c9fe][A:train#89fc379f-fc66-43cf-ab18-44b818b6d3e6]applied filter: PrivacyPetinaLibrary@job on task_result
+[E:4a317a9b-3c5e-4460-b924-d8a686ed9ab4][R:1bd908a1-cc63-43ae-a3b4-e31b3d973dae][T:2025-10-02 23:44:33.910561][J:de67ee28-8498-461e-a0c5-bf788cf7c9fe][A:train#89fc379f-fc66-43cf-ab18-44b818b6d3e6]submit result OK
+[E:174d8e64-e3a8-45ac-8e35-e1a0fc8e4f19][R:e51d8bdd-a374-4693-a61e-cc5d42fa4855][T:2025-10-02 23:45:09.281632][J:de67ee28-8498-461e-a0c5-bf788cf7c9fe][A:train#7c5af8b7-2903-4ea0-819e-218ed8a8d868]received task from server
+[E:69706e3b-d62c-43db-8118-c731a5df2671][T:2025-10-02 23:45:09.282059][J:de67ee28-8498-461e-a0c5-bf788cf7c9fe][A:train#7c5af8b7-2903-4ea0-819e-218ed8a8d868]invoked executor LearnerExecutor
+[E:f5505534-9244-434b-8351-a15c65ba66a3][T:2025-10-02 23:45:58.546408][J:de67ee28-8498-461e-a0c5-bf788cf7c9fe][A:train#7c5af8b7-2903-4ea0-819e-218ed8a8d868]applied filter: PrivacyPetinaLibrary@job on task_result
+[E:675b55e6-1829-475d-9de5-f17d9e841c6f][R:e51d8bdd-a374-4693-a61e-cc5d42fa4855][T:2025-10-02 23:45:58.547045][J:de67ee28-8498-461e-a0c5-bf788cf7c9fe][A:train#7c5af8b7-2903-4ea0-819e-218ed8a8d868]submit result OK
+[E:6eab11a4-8d81-4542-9218-5183630e00a4][R:990f0ed1-ba70-4fb3-a878-236a59431b9e][T:2025-10-02 23:46:35.218303][J:de67ee28-8498-461e-a0c5-bf788cf7c9fe][A:train#1024453b-1e4b-4609-83f7-0cf0987b0124]received task from server
+[E:7f509cf2-3c44-4eb8-af4d-0cb1cc5351e6][T:2025-10-02 23:46:35.218738][J:de67ee28-8498-461e-a0c5-bf788cf7c9fe][A:train#1024453b-1e4b-4609-83f7-0cf0987b0124]invoked executor LearnerExecutor
+[E:ffc1e8bd-fb42-4a7f-ac35-88056dd81e55][T:2025-10-02 23:47:19.896992][U:][A:train.abort]
+[E:3f8dfb29-3b38-40bc-8f29-f2a4a557df08][R:aa0ce5c3-7e5c-41f7-8318-1c4ada2c2aaa][T:2025-10-02 23:47:24.896934][U:admin@ornl.gov][A:train.shutdown]
+[E:04f59795-1d12-48b2-876a-d1711eb8a39f][T:2025-10-02 23:47:28.468962][J:de67ee28-8498-461e-a0c5-bf788cf7c9fe][A:train#1024453b-1e4b-4609-83f7-0cf0987b0124]applied filter: PrivacyPetinaLibrary@job on task_result
+[E:9a03bbde-f7d3-4027-9a2a-1bcc2b73ee59][R:990f0ed1-ba70-4fb3-a878-236a59431b9e][T:2025-10-02 23:47:28.469600][J:de67ee28-8498-461e-a0c5-bf788cf7c9fe][A:train#1024453b-1e4b-4609-83f7-0cf0987b0124]submit result OK

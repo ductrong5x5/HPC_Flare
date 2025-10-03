@@ -1,0 +1,511 @@
+2025-10-02 23:27:00,924 - nvflare.private.fed.app.deployer.server_deployer.ServerDeployer - INFO - server heartbeat timeout set to 600
+2025-10-02 23:27:01,013 - CoreCell - INFO - server: creating listener on grpc://0:8002
+2025-10-02 23:27:01,074 - CoreCell - INFO - server: created backbone external listener for grpc://0:8002
+2025-10-02 23:27:01,074 - ConnectorManager - INFO - 1217655: Try start_listener Listener resources: {'secure': False, 'host': 'localhost'}
+2025-10-02 23:27:01,076 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connector [CH00002 PASSIVE tcp://0:26708] is starting
+2025-10-02 23:27:01,577 - CoreCell - INFO - server: created backbone internal listener for tcp://localhost:26708
+2025-10-02 23:27:01,577 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connector [CH00001 PASSIVE grpc://0:8002] is starting
+2025-10-02 23:27:01,578 - FederatedServer - INFO - max_reg_duration=60.0
+2025-10-02 23:27:01,581 - nvflare.private.fed.app.deployer.server_deployer.ServerDeployer - INFO - deployed FLARE Server.
+2025-10-02 23:27:01,608 - nvflare.fuel.hci.server.hci - INFO - Starting Admin Server localhost on Port 8003
+2025-10-02 23:27:01,608 - root - INFO - Server started
+2025-10-02 23:27:01,624 - nvflare.fuel.f3.drivers.grpc_driver.Server - INFO - added secure port at 0.0.0.0:8002
+2025-10-02 23:27:06,585 - ServerState - INFO - Got the primary sp: localhost fl_port: 8002 SSID: ebc6125d-0a56-4688-9b08-355fe9e4d61a. Turning to hot.
+2025-10-02 23:28:52,647 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00002 0.0.0.0:8002 <= ipv4:127.0.0.1:56138 SSL site-27] is created: PID: 1217655
+2025-10-02 23:28:52,729 - FederatedServer - INFO - received challenge request from site-27: me=140630012984528
+2025-10-02 23:28:52,729 - FederatedServer - INFO - added reg session for site-27: <nvflare.private.defs.ClientRegSession object at 0x7fe6f9d57ca0>
+2025-10-02 23:28:52,822 - ClientManager - INFO - identity verified for client 'site-27'
+2025-10-02 23:28:52,822 - ClientManager - INFO - authenticated client site-27
+2025-10-02 23:28:52,822 - ClientManager - INFO - Client: New client site-27@128.219.135.135 joined. Sent token: 32be9796-78cd-44b6-8f3d-30e004eddaa7.  Total clients: 1
+2025-10-02 23:28:53,743 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00003 0.0.0.0:8002 <= ipv4:127.0.0.1:56148 SSL site-28] is created: PID: 1217655
+2025-10-02 23:28:53,844 - FederatedServer - INFO - received challenge request from site-28: me=140630012984528
+2025-10-02 23:28:53,844 - FederatedServer - INFO - added reg session for site-28: <nvflare.private.defs.ClientRegSession object at 0x7fe6f9da1c90>
+2025-10-02 23:28:53,891 - ClientManager - INFO - identity verified for client 'site-28'
+2025-10-02 23:28:53,891 - ClientManager - INFO - authenticated client site-28
+2025-10-02 23:28:53,891 - ClientManager - INFO - Client: New client site-28@128.219.135.135 joined. Sent token: 2ed6faca-b0c9-4694-ad11-9ed901be1684.  Total clients: 2
+2025-10-02 23:28:54,124 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00004 0.0.0.0:8002 <= ipv4:127.0.0.1:56156 SSL site-11] is created: PID: 1217655
+2025-10-02 23:28:54,196 - FederatedServer - INFO - received challenge request from site-11: me=140630012984528
+2025-10-02 23:28:54,197 - FederatedServer - INFO - added reg session for site-11: <nvflare.private.defs.ClientRegSession object at 0x7fe6f9da0c40>
+2025-10-02 23:28:54,243 - ClientManager - INFO - identity verified for client 'site-11'
+2025-10-02 23:28:54,243 - ClientManager - INFO - authenticated client site-11
+2025-10-02 23:28:54,243 - ClientManager - INFO - Client: New client site-11@128.219.135.135 joined. Sent token: 8338867d-a1a1-425c-b400-d6868a3fc953.  Total clients: 3
+2025-10-02 23:28:54,256 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00005 0.0.0.0:8002 <= ipv4:127.0.0.1:56162 SSL site-6] is created: PID: 1217655
+2025-10-02 23:28:54,311 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00006 0.0.0.0:8002 <= ipv4:127.0.0.1:56174 SSL site-5] is created: PID: 1217655
+2025-10-02 23:28:54,333 - FederatedServer - INFO - received challenge request from site-6: me=140630012984528
+2025-10-02 23:28:54,333 - FederatedServer - INFO - added reg session for site-6: <nvflare.private.defs.ClientRegSession object at 0x7fe6f9da3dc0>
+2025-10-02 23:28:54,361 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00007 0.0.0.0:8002 <= ipv4:127.0.0.1:56176 SSL site-1] is created: PID: 1217655
+2025-10-02 23:28:54,375 - FederatedServer - INFO - received challenge request from site-5: me=140630012984528
+2025-10-02 23:28:54,375 - FederatedServer - INFO - added reg session for site-5: <nvflare.private.defs.ClientRegSession object at 0x7fe6f9dc0b20>
+2025-10-02 23:28:54,379 - ClientManager - INFO - identity verified for client 'site-6'
+2025-10-02 23:28:54,379 - ClientManager - INFO - authenticated client site-6
+2025-10-02 23:28:54,379 - ClientManager - INFO - Client: New client site-6@128.219.135.135 joined. Sent token: 015fc42e-e3ac-4136-af60-4217847f4620.  Total clients: 4
+2025-10-02 23:28:54,421 - ClientManager - INFO - identity verified for client 'site-5'
+2025-10-02 23:28:54,421 - ClientManager - INFO - authenticated client site-5
+2025-10-02 23:28:54,421 - ClientManager - INFO - Client: New client site-5@128.219.135.135 joined. Sent token: d2e61b84-f1d2-4820-8a41-949e380bd757.  Total clients: 5
+2025-10-02 23:28:54,470 - FederatedServer - INFO - received challenge request from site-1: me=140630012984528
+2025-10-02 23:28:54,470 - FederatedServer - INFO - added reg session for site-1: <nvflare.private.defs.ClientRegSession object at 0x7fe6f9dc0b50>
+2025-10-02 23:28:54,516 - ClientManager - INFO - identity verified for client 'site-1'
+2025-10-02 23:28:54,516 - ClientManager - INFO - authenticated client site-1
+2025-10-02 23:28:54,516 - ClientManager - INFO - Client: New client site-1@128.219.135.135 joined. Sent token: b34c8fc1-5f47-4043-b8f5-16b275084c2f.  Total clients: 6
+2025-10-02 23:28:54,598 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00008 0.0.0.0:8002 <= ipv4:127.0.0.1:56192 SSL site-21] is created: PID: 1217655
+2025-10-02 23:28:54,744 - FederatedServer - INFO - received challenge request from site-21: me=140630012984528
+2025-10-02 23:28:54,745 - FederatedServer - INFO - added reg session for site-21: <nvflare.private.defs.ClientRegSession object at 0x7fe6f9dc1ba0>
+2025-10-02 23:28:54,806 - ClientManager - INFO - identity verified for client 'site-21'
+2025-10-02 23:28:54,807 - ClientManager - INFO - authenticated client site-21
+2025-10-02 23:28:54,807 - ClientManager - INFO - Client: New client site-21@128.219.135.135 joined. Sent token: 8b561eef-5870-4524-b841-380d20ed917c.  Total clients: 7
+2025-10-02 23:28:54,823 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00009 0.0.0.0:8002 <= ipv4:127.0.0.1:56202 SSL site-23] is created: PID: 1217655
+2025-10-02 23:28:54,862 - FederatedServer - INFO - received challenge request from site-23: me=140630012984528
+2025-10-02 23:28:54,862 - FederatedServer - INFO - added reg session for site-23: <nvflare.private.defs.ClientRegSession object at 0x7fe6f9dc2920>
+2025-10-02 23:28:54,909 - ClientManager - INFO - identity verified for client 'site-23'
+2025-10-02 23:28:54,909 - ClientManager - INFO - authenticated client site-23
+2025-10-02 23:28:54,910 - ClientManager - INFO - Client: New client site-23@128.219.135.135 joined. Sent token: 88a00c95-a27a-4703-8ac0-2256eb266539.  Total clients: 8
+2025-10-02 23:28:54,945 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00010 0.0.0.0:8002 <= ipv4:127.0.0.1:56216 SSL site-35] is created: PID: 1217655
+2025-10-02 23:28:54,947 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00011 0.0.0.0:8002 <= ipv4:127.0.0.1:56222 SSL site-19] is created: PID: 1217655
+2025-10-02 23:28:54,961 - FederatedServer - INFO - received challenge request from site-19: me=140630012984528
+2025-10-02 23:28:54,961 - FederatedServer - INFO - added reg session for site-19: <nvflare.private.defs.ClientRegSession object at 0x7fe6e76dc400>
+2025-10-02 23:28:54,981 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00012 0.0.0.0:8002 <= ipv4:127.0.0.1:56234 SSL site-34] is created: PID: 1217655
+2025-10-02 23:28:54,988 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00013 0.0.0.0:8002 <= ipv4:127.0.0.1:56246 SSL site-45] is created: PID: 1217655
+2025-10-02 23:28:54,990 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00014 0.0.0.0:8002 <= ipv4:127.0.0.1:56248 SSL site-17] is created: PID: 1217655
+2025-10-02 23:28:54,992 - FederatedServer - INFO - received challenge request from site-35: me=140630012984528
+2025-10-02 23:28:54,992 - FederatedServer - INFO - added reg session for site-35: <nvflare.private.defs.ClientRegSession object at 0x7fe6e76de9e0>
+2025-10-02 23:28:54,999 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00015 0.0.0.0:8002 <= ipv4:127.0.0.1:56254 SSL site-40] is created: PID: 1217655
+2025-10-02 23:28:55,016 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00016 0.0.0.0:8002 <= ipv4:127.0.0.1:56268 SSL site-10] is created: PID: 1217655
+2025-10-02 23:28:55,017 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00017 0.0.0.0:8002 <= ipv4:127.0.0.1:56284 SSL site-37] is created: PID: 1217655
+2025-10-02 23:28:55,020 - ClientManager - INFO - identity verified for client 'site-19'
+2025-10-02 23:28:55,021 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00018 0.0.0.0:8002 <= ipv4:127.0.0.1:56298 SSL site-33] is created: PID: 1217655
+2025-10-02 23:28:55,022 - ClientManager - INFO - authenticated client site-19
+2025-10-02 23:28:55,023 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00019 0.0.0.0:8002 <= ipv4:127.0.0.1:56312 SSL site-41] is created: PID: 1217655
+2025-10-02 23:28:55,024 - ClientManager - INFO - Client: New client site-19@128.219.135.135 joined. Sent token: 3794b783-0bdc-420d-aaa6-c94faef68f58.  Total clients: 9
+2025-10-02 23:28:55,027 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00020 0.0.0.0:8002 <= ipv4:127.0.0.1:56318 SSL site-39] is created: PID: 1217655
+2025-10-02 23:28:55,028 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00021 0.0.0.0:8002 <= ipv4:127.0.0.1:56330 SSL site-16] is created: PID: 1217655
+2025-10-02 23:28:55,030 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00022 0.0.0.0:8002 <= ipv4:127.0.0.1:56324 SSL site-30] is created: PID: 1217655
+2025-10-02 23:28:55,031 - FederatedServer - INFO - received challenge request from site-34: me=140630012984528
+2025-10-02 23:28:55,032 - FederatedServer - INFO - added reg session for site-34: <nvflare.private.defs.ClientRegSession object at 0x7fe6e7719090>
+2025-10-02 23:28:55,034 - FederatedServer - INFO - received challenge request from site-45: me=140630012984528
+2025-10-02 23:28:55,035 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00023 0.0.0.0:8002 <= ipv4:127.0.0.1:56344 SSL site-44] is created: PID: 1217655
+2025-10-02 23:28:55,035 - FederatedServer - INFO - added reg session for site-45: <nvflare.private.defs.ClientRegSession object at 0x7fe6e7719360>
+2025-10-02 23:28:55,039 - FederatedServer - INFO - received challenge request from site-40: me=140630012984528
+2025-10-02 23:28:55,041 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00024 0.0.0.0:8002 <= ipv4:127.0.0.1:56352 SSL site-32] is created: PID: 1217655
+2025-10-02 23:28:55,041 - FederatedServer - INFO - added reg session for site-40: <nvflare.private.defs.ClientRegSession object at 0x7fe6e7719180>
+2025-10-02 23:28:55,045 - FederatedServer - INFO - received challenge request from site-17: me=140630012984528
+2025-10-02 23:28:55,046 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00025 0.0.0.0:8002 <= ipv4:127.0.0.1:56380 SSL site-20] is created: PID: 1217655
+2025-10-02 23:28:55,047 - FederatedServer - INFO - added reg session for site-17: <nvflare.private.defs.ClientRegSession object at 0x7fe6e7738b50>
+2025-10-02 23:28:55,047 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00026 0.0.0.0:8002 <= ipv4:127.0.0.1:56396 SSL site-2] is created: PID: 1217655
+2025-10-02 23:28:55,049 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00027 0.0.0.0:8002 <= ipv4:127.0.0.1:56366 SSL site-7] is created: PID: 1217655
+2025-10-02 23:28:55,051 - FederatedServer - INFO - received challenge request from site-10: me=140630012984528
+2025-10-02 23:28:55,051 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00028 0.0.0.0:8002 <= ipv4:127.0.0.1:56406 SSL site-3] is created: PID: 1217655
+2025-10-02 23:28:55,053 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00029 0.0.0.0:8002 <= ipv4:127.0.0.1:56410 SSL site-47] is created: PID: 1217655
+2025-10-02 23:28:55,053 - FederatedServer - INFO - added reg session for site-10: <nvflare.private.defs.ClientRegSession object at 0x7fe6e773b100>
+2025-10-02 23:28:55,055 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00030 0.0.0.0:8002 <= ipv4:127.0.0.1:56416 SSL site-38] is created: PID: 1217655
+2025-10-02 23:28:55,056 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00031 0.0.0.0:8002 <= ipv4:127.0.0.1:56450 SSL site-31] is created: PID: 1217655
+2025-10-02 23:28:55,058 - FederatedServer - INFO - received challenge request from site-37: me=140630012984528
+2025-10-02 23:28:55,059 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00032 0.0.0.0:8002 <= ipv4:127.0.0.1:56446 SSL site-42] is created: PID: 1217655
+2025-10-02 23:28:55,060 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00033 0.0.0.0:8002 <= ipv4:127.0.0.1:56432 SSL site-29] is created: PID: 1217655
+2025-10-02 23:28:55,061 - FederatedServer - INFO - added reg session for site-37: <nvflare.private.defs.ClientRegSession object at 0x7fe6e771a1d0>
+2025-10-02 23:28:55,062 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00034 0.0.0.0:8002 <= ipv4:127.0.0.1:56454 SSL site-25] is created: PID: 1217655
+2025-10-02 23:28:55,063 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00035 0.0.0.0:8002 <= ipv4:127.0.0.1:56466 SSL site-36] is created: PID: 1217655
+2025-10-02 23:28:55,066 - FederatedServer - INFO - received challenge request from site-16: me=140630012984528
+2025-10-02 23:28:55,069 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00036 0.0.0.0:8002 <= ipv4:127.0.0.1:56502 SSL site-4] is created: PID: 1217655
+2025-10-02 23:28:55,070 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00037 0.0.0.0:8002 <= ipv4:127.0.0.1:56496 SSL site-48] is created: PID: 1217655
+2025-10-02 23:28:55,071 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00038 0.0.0.0:8002 <= ipv4:127.0.0.1:56478 SSL site-43] is created: PID: 1217655
+2025-10-02 23:28:55,072 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00039 0.0.0.0:8002 <= ipv4:127.0.0.1:56474 SSL site-46] is created: PID: 1217655
+2025-10-02 23:28:55,072 - FederatedServer - INFO - added reg session for site-16: <nvflare.private.defs.ClientRegSession object at 0x7fe6e771aad0>
+2025-10-02 23:28:55,073 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00040 0.0.0.0:8002 <= ipv4:127.0.0.1:56494 SSL site-26] is created: PID: 1217655
+2025-10-02 23:28:55,075 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00041 0.0.0.0:8002 <= ipv4:127.0.0.1:56508 SSL site-8] is created: PID: 1217655
+2025-10-02 23:28:55,079 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00042 0.0.0.0:8002 <= ipv4:127.0.0.1:56516 SSL site-22] is created: PID: 1217655
+2025-10-02 23:28:55,079 - FederatedServer - INFO - received challenge request from site-33: me=140630012984528
+2025-10-02 23:28:55,080 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00043 0.0.0.0:8002 <= ipv4:127.0.0.1:56528 SSL site-14] is created: PID: 1217655
+2025-10-02 23:28:55,081 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00044 0.0.0.0:8002 <= ipv4:127.0.0.1:56540 SSL site-24] is created: PID: 1217655
+2025-10-02 23:28:55,083 - FederatedServer - INFO - added reg session for site-33: <nvflare.private.defs.ClientRegSession object at 0x7fe6e779a170>
+2025-10-02 23:28:55,086 - FederatedServer - INFO - received challenge request from site-30: me=140630012984528
+2025-10-02 23:28:55,087 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00045 0.0.0.0:8002 <= ipv4:127.0.0.1:56550 SSL site-9] is created: PID: 1217655
+2025-10-02 23:28:55,087 - FederatedServer - INFO - added reg session for site-30: <nvflare.private.defs.ClientRegSession object at 0x7fe6e771aa70>
+2025-10-02 23:28:55,090 - FederatedServer - INFO - received challenge request from site-39: me=140630012984528
+2025-10-02 23:28:55,091 - ClientManager - INFO - identity verified for client 'site-35'
+2025-10-02 23:28:55,091 - FederatedServer - INFO - added reg session for site-39: <nvflare.private.defs.ClientRegSession object at 0x7fe6e771bcd0>
+2025-10-02 23:28:55,091 - ClientManager - INFO - authenticated client site-35
+2025-10-02 23:28:55,093 - FederatedServer - INFO - received challenge request from site-41: me=140630012984528
+2025-10-02 23:28:55,094 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00046 0.0.0.0:8002 <= ipv4:127.0.0.1:56564 SSL site-12] is created: PID: 1217655
+2025-10-02 23:28:55,094 - ClientManager - INFO - Client: New client site-35@128.219.135.135 joined. Sent token: 3f6ed445-4020-4f26-a204-9b02c4d3e7b6.  Total clients: 10
+2025-10-02 23:28:55,094 - FederatedServer - INFO - added reg session for site-41: <nvflare.private.defs.ClientRegSession object at 0x7fe6e7738700>
+2025-10-02 23:28:55,098 - FederatedServer - INFO - received challenge request from site-3: me=140630012984528
+2025-10-02 23:28:55,098 - FederatedServer - INFO - added reg session for site-3: <nvflare.private.defs.ClientRegSession object at 0x7fe6e773a140>
+2025-10-02 23:28:55,100 - FederatedServer - INFO - received challenge request from site-44: me=140630012984528
+2025-10-02 23:28:55,100 - FederatedServer - INFO - added reg session for site-44: <nvflare.private.defs.ClientRegSession object at 0x7fe6e77541f0>
+2025-10-02 23:28:55,102 - ClientManager - INFO - identity verified for client 'site-34'
+2025-10-02 23:28:55,102 - FederatedServer - INFO - received challenge request from site-4: me=140630012984528
+2025-10-02 23:28:55,102 - ClientManager - INFO - identity verified for client 'site-40'
+2025-10-02 23:28:55,103 - ClientManager - INFO - identity verified for client 'site-45'
+2025-10-02 23:28:55,103 - ClientManager - INFO - authenticated client site-34
+2025-10-02 23:28:55,103 - FederatedServer - INFO - added reg session for site-4: <nvflare.private.defs.ClientRegSession object at 0x7fe6e7778d60>
+2025-10-02 23:28:55,103 - ClientManager - INFO - authenticated client site-40
+2025-10-02 23:28:55,103 - ClientManager - INFO - authenticated client site-45
+2025-10-02 23:28:55,104 - ClientManager - INFO - Client: New client site-34@128.219.135.135 joined. Sent token: 978fc9dd-41b7-46d3-9272-d75250593d7c.  Total clients: 11
+2025-10-02 23:28:55,106 - ClientManager - INFO - identity verified for client 'site-10'
+2025-10-02 23:28:55,106 - ClientManager - INFO - identity verified for client 'site-17'
+2025-10-02 23:28:55,107 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00047 0.0.0.0:8002 <= ipv4:127.0.0.1:56570 SSL site-15] is created: PID: 1217655
+2025-10-02 23:28:55,108 - ClientManager - INFO - Client: New client site-40@128.219.135.135 joined. Sent token: 039932b9-9646-4730-8389-c074573573ad.  Total clients: 12
+2025-10-02 23:28:55,111 - ClientManager - INFO - Client: New client site-45@128.219.135.135 joined. Sent token: 4c173d79-2407-47c6-8864-c32a3d9d1598.  Total clients: 13
+2025-10-02 23:28:55,112 - ClientManager - INFO - authenticated client site-17
+2025-10-02 23:28:55,112 - ClientManager - INFO - authenticated client site-10
+2025-10-02 23:28:55,112 - ClientManager - INFO - Client: New client site-17@128.219.135.135 joined. Sent token: d64cf4f1-b050-4640-99a7-3953f3e0cee3.  Total clients: 14
+2025-10-02 23:28:55,113 - ClientManager - INFO - Client: New client site-10@128.219.135.135 joined. Sent token: 4556fcf9-03f2-4af0-bbd0-c23944331798.  Total clients: 15
+2025-10-02 23:28:55,116 - ClientManager - INFO - identity verified for client 'site-37'
+2025-10-02 23:28:55,116 - ClientManager - INFO - authenticated client site-37
+2025-10-02 23:28:55,116 - ClientManager - INFO - Client: New client site-37@128.219.135.135 joined. Sent token: a4dd4b13-7e72-4651-b4c5-9865c8c92be0.  Total clients: 16
+2025-10-02 23:28:55,124 - ClientManager - INFO - identity verified for client 'site-16'
+2025-10-02 23:28:55,125 - ClientManager - INFO - authenticated client site-16
+2025-10-02 23:28:55,125 - ClientManager - INFO - Client: New client site-16@128.219.135.135 joined. Sent token: 33a298b6-6c6f-458f-b163-5e033e4b140b.  Total clients: 17
+2025-10-02 23:28:55,131 - ClientManager - INFO - identity verified for client 'site-33'
+2025-10-02 23:28:55,131 - ClientManager - INFO - authenticated client site-33
+2025-10-02 23:28:55,132 - ClientManager - INFO - Client: New client site-33@128.219.135.135 joined. Sent token: c76a5446-b57e-4185-a227-32062eed1e4b.  Total clients: 18
+2025-10-02 23:28:55,133 - FederatedServer - INFO - received challenge request from site-12: me=140630012984528
+2025-10-02 23:28:55,133 - FederatedServer - INFO - added reg session for site-12: <nvflare.private.defs.ClientRegSession object at 0x7fe6e75c2800>
+2025-10-02 23:28:55,135 - ClientManager - INFO - identity verified for client 'site-30'
+2025-10-02 23:28:55,136 - ClientManager - INFO - authenticated client site-30
+2025-10-02 23:28:55,136 - ClientManager - INFO - Client: New client site-30@128.219.135.135 joined. Sent token: 1313569c-a823-4f68-a5a5-9509838d3109.  Total clients: 19
+2025-10-02 23:28:55,138 - ClientManager - INFO - identity verified for client 'site-39'
+2025-10-02 23:28:55,138 - ClientManager - INFO - authenticated client site-39
+2025-10-02 23:28:55,138 - ClientManager - INFO - Client: New client site-39@128.219.135.135 joined. Sent token: 210fddd4-1f5b-4886-b4e6-8e903f640d41.  Total clients: 20
+2025-10-02 23:28:55,195 - ClientManager - INFO - identity verified for client 'site-41'
+2025-10-02 23:28:55,196 - ClientManager - INFO - identity verified for client 'site-44'
+2025-10-02 23:28:55,198 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00048 0.0.0.0:8002 <= ipv4:127.0.0.1:56580 SSL site-13] is created: PID: 1217655
+2025-10-02 23:28:55,198 - ClientManager - INFO - identity verified for client 'site-4'
+2025-10-02 23:28:55,198 - ClientManager - INFO - identity verified for client 'site-3'
+2025-10-02 23:28:55,199 - ClientManager - INFO - identity verified for client 'site-12'
+2025-10-02 23:28:55,199 - ClientManager - INFO - authenticated client site-41
+2025-10-02 23:28:55,200 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00049 0.0.0.0:8002 <= ipv4:127.0.0.1:56588 SSL site-18] is created: PID: 1217655
+2025-10-02 23:28:55,200 - ClientManager - INFO - authenticated client site-44
+2025-10-02 23:28:55,201 - ClientManager - INFO - authenticated client site-4
+2025-10-02 23:28:55,201 - ClientManager - INFO - authenticated client site-3
+2025-10-02 23:28:55,201 - ClientManager - INFO - authenticated client site-12
+2025-10-02 23:28:55,201 - ClientManager - INFO - Client: New client site-41@128.219.135.135 joined. Sent token: 1946078e-ee18-447d-8d9a-12e1949edf56.  Total clients: 21
+2025-10-02 23:28:55,204 - ClientManager - INFO - Client: New client site-44@128.219.135.135 joined. Sent token: 2afccd9b-8fef-4977-89d0-52a72c2e7dce.  Total clients: 22
+2025-10-02 23:28:55,205 - ClientManager - INFO - Client: New client site-4@128.219.135.135 joined. Sent token: 5da0bd19-35cb-4e32-8760-dd0dd425ea48.  Total clients: 23
+2025-10-02 23:28:55,207 - ClientManager - INFO - Client: New client site-3@128.219.135.135 joined. Sent token: 4c8d0986-c5f6-4db2-bb30-74ee01d5f357.  Total clients: 24
+2025-10-02 23:28:55,208 - ClientManager - INFO - Client: New client site-12@128.219.135.135 joined. Sent token: 9125eddc-f566-4974-9433-9c06c2e4a87a.  Total clients: 25
+2025-10-02 23:28:57,021 - FederatedServer - INFO - received challenge request from site-26: me=140630012984528
+2025-10-02 23:28:57,022 - FederatedServer - INFO - added reg session for site-26: <nvflare.private.defs.ClientRegSession object at 0x7fe6e75c35b0>
+2025-10-02 23:28:57,031 - FederatedServer - INFO - received challenge request from site-46: me=140630012984528
+2025-10-02 23:28:57,032 - FederatedServer - INFO - added reg session for site-46: <nvflare.private.defs.ClientRegSession object at 0x7fe6e75c1780>
+2025-10-02 23:28:57,033 - FederatedServer - INFO - received challenge request from site-32: me=140630012984528
+2025-10-02 23:28:57,035 - FederatedServer - INFO - added reg session for site-32: <nvflare.private.defs.ClientRegSession object at 0x7fe6e75c3250>
+2025-10-02 23:28:57,036 - FederatedServer - INFO - received challenge request from site-7: me=140630012984528
+2025-10-02 23:28:57,036 - FederatedServer - INFO - added reg session for site-7: <nvflare.private.defs.ClientRegSession object at 0x7fe6e75c27a0>
+2025-10-02 23:28:57,037 - FederatedServer - INFO - received challenge request from site-14: me=140630012984528
+2025-10-02 23:28:57,038 - FederatedServer - INFO - added reg session for site-14: <nvflare.private.defs.ClientRegSession object at 0x7fe6e77543a0>
+2025-10-02 23:28:57,039 - FederatedServer - INFO - received challenge request from site-8: me=140630012984528
+2025-10-02 23:28:57,040 - FederatedServer - INFO - added reg session for site-8: <nvflare.private.defs.ClientRegSession object at 0x7fe6e75c1810>
+2025-10-02 23:28:57,042 - FederatedServer - INFO - received challenge request from site-9: me=140630012984528
+2025-10-02 23:28:57,042 - FederatedServer - INFO - added reg session for site-9: <nvflare.private.defs.ClientRegSession object at 0x7fe6e7756a10>
+2025-10-02 23:28:57,044 - FederatedServer - INFO - received challenge request from site-15: me=140630012984528
+2025-10-02 23:28:57,044 - FederatedServer - INFO - added reg session for site-15: <nvflare.private.defs.ClientRegSession object at 0x7fe6e75c0670>
+2025-10-02 23:28:57,046 - FederatedServer - INFO - received challenge request from site-25: me=140630012984528
+2025-10-02 23:28:57,047 - FederatedServer - INFO - added reg session for site-25: <nvflare.private.defs.ClientRegSession object at 0x7fe6e773a290>
+2025-10-02 23:28:57,048 - FederatedServer - INFO - received challenge request from site-29: me=140630012984528
+2025-10-02 23:28:57,049 - FederatedServer - INFO - added reg session for site-29: <nvflare.private.defs.ClientRegSession object at 0x7fe6e7756ad0>
+2025-10-02 23:28:57,050 - FederatedServer - INFO - received challenge request from site-38: me=140630012984528
+2025-10-02 23:28:57,050 - FederatedServer - INFO - added reg session for site-38: <nvflare.private.defs.ClientRegSession object at 0x7fe6e7778e50>
+2025-10-02 23:28:57,052 - FederatedServer - INFO - received challenge request from site-18: me=140630012984528
+2025-10-02 23:28:57,052 - FederatedServer - INFO - added reg session for site-18: <nvflare.private.defs.ClientRegSession object at 0x7fe6e75c0ac0>
+2025-10-02 23:28:57,054 - FederatedServer - INFO - received challenge request from site-22: me=140630012984528
+2025-10-02 23:28:57,055 - FederatedServer - INFO - added reg session for site-22: <nvflare.private.defs.ClientRegSession object at 0x7fe6e75c0a90>
+2025-10-02 23:28:57,056 - FederatedServer - INFO - received challenge request from site-13: me=140630012984528
+2025-10-02 23:28:57,056 - FederatedServer - INFO - added reg session for site-13: <nvflare.private.defs.ClientRegSession object at 0x7fe6e75c0190>
+2025-10-02 23:28:57,058 - FederatedServer - INFO - received challenge request from site-20: me=140630012984528
+2025-10-02 23:28:57,058 - FederatedServer - INFO - added reg session for site-20: <nvflare.private.defs.ClientRegSession object at 0x7fe6e75c0130>
+2025-10-02 23:28:57,059 - FederatedServer - INFO - received challenge request from site-42: me=140630012984528
+2025-10-02 23:28:57,060 - FederatedServer - INFO - added reg session for site-42: <nvflare.private.defs.ClientRegSession object at 0x7fe6e777b040>
+2025-10-02 23:28:57,061 - FederatedServer - INFO - received challenge request from site-31: me=140630012984528
+2025-10-02 23:28:57,061 - FederatedServer - INFO - added reg session for site-31: <nvflare.private.defs.ClientRegSession object at 0x7fe6e77569e0>
+2025-10-02 23:28:57,062 - FederatedServer - INFO - received challenge request from site-2: me=140630012984528
+2025-10-02 23:28:57,063 - FederatedServer - INFO - added reg session for site-2: <nvflare.private.defs.ClientRegSession object at 0x7fe6e777b100>
+2025-10-02 23:28:57,064 - FederatedServer - INFO - received challenge request from site-24: me=140630012984528
+2025-10-02 23:28:57,064 - FederatedServer - INFO - added reg session for site-24: <nvflare.private.defs.ClientRegSession object at 0x7fe6e773b6a0>
+2025-10-02 23:28:57,065 - FederatedServer - INFO - received challenge request from site-48: me=140630012984528
+2025-10-02 23:28:57,065 - FederatedServer - INFO - added reg session for site-48: <nvflare.private.defs.ClientRegSession object at 0x7fe6e777a920>
+2025-10-02 23:28:57,067 - FederatedServer - INFO - received challenge request from site-47: me=140630012984528
+2025-10-02 23:28:57,067 - FederatedServer - INFO - added reg session for site-47: <nvflare.private.defs.ClientRegSession object at 0x7fe6e77568f0>
+2025-10-02 23:28:57,068 - FederatedServer - INFO - received challenge request from site-36: me=140630012984528
+2025-10-02 23:28:57,069 - FederatedServer - INFO - added reg session for site-36: <nvflare.private.defs.ClientRegSession object at 0x7fe6e7755d50>
+2025-10-02 23:28:57,071 - ClientManager - INFO - identity verified for client 'site-26'
+2025-10-02 23:28:57,072 - ClientManager - INFO - authenticated client site-26
+2025-10-02 23:28:57,072 - ClientManager - INFO - Client: New client site-26@128.219.135.135 joined. Sent token: ebd2f252-5a36-41fb-9df5-37f74c49cfe5.  Total clients: 26
+2025-10-02 23:28:57,075 - FederatedServer - INFO - received challenge request from site-43: me=140630012984528
+2025-10-02 23:28:57,075 - FederatedServer - INFO - added reg session for site-43: <nvflare.private.defs.ClientRegSession object at 0x7fe6e75da410>
+2025-10-02 23:28:57,081 - ClientManager - INFO - identity verified for client 'site-32'
+2025-10-02 23:28:57,082 - ClientManager - INFO - authenticated client site-32
+2025-10-02 23:28:57,082 - ClientManager - INFO - Client: New client site-32@128.219.135.135 joined. Sent token: c33fc6cf-f94f-484f-8df2-ecc134b52254.  Total clients: 27
+2025-10-02 23:28:57,083 - ClientManager - INFO - identity verified for client 'site-7'
+2025-10-02 23:28:57,084 - ClientManager - INFO - identity verified for client 'site-14'
+2025-10-02 23:28:57,084 - ClientManager - INFO - authenticated client site-7
+2025-10-02 23:28:57,084 - ClientManager - INFO - authenticated client site-14
+2025-10-02 23:28:57,085 - ClientManager - INFO - Client: New client site-7@128.219.135.135 joined. Sent token: 8b7cd010-8c21-4624-b667-dc4470370e4d.  Total clients: 28
+2025-10-02 23:28:57,086 - ClientManager - INFO - Client: New client site-14@128.219.135.135 joined. Sent token: 0b2a0168-1e7d-4b5f-b353-502f1876a405.  Total clients: 29
+2025-10-02 23:28:57,086 - ClientManager - INFO - identity verified for client 'site-46'
+2025-10-02 23:28:57,088 - ClientManager - INFO - authenticated client site-46
+2025-10-02 23:28:57,088 - ClientManager - INFO - Client: New client site-46@128.219.135.135 joined. Sent token: d2f43be3-d1b0-4d87-8b33-ad8d519654f8.  Total clients: 30
+2025-10-02 23:28:57,090 - ClientManager - INFO - identity verified for client 'site-9'
+2025-10-02 23:28:57,091 - ClientManager - INFO - authenticated client site-9
+2025-10-02 23:28:57,091 - ClientManager - INFO - Client: New client site-9@128.219.135.135 joined. Sent token: 22c1ce69-ed55-4a4d-bff4-30f07f188e11.  Total clients: 31
+2025-10-02 23:28:57,097 - ClientManager - INFO - identity verified for client 'site-38'
+2025-10-02 23:28:57,097 - ClientManager - INFO - authenticated client site-38
+2025-10-02 23:28:57,098 - ClientManager - INFO - Client: New client site-38@128.219.135.135 joined. Sent token: d897556a-3dc2-4dfd-bfa1-86707ab429c3.  Total clients: 32
+2025-10-02 23:28:57,101 - ClientManager - INFO - identity verified for client 'site-22'
+2025-10-02 23:28:57,102 - ClientManager - INFO - authenticated client site-22
+2025-10-02 23:28:57,102 - ClientManager - INFO - Client: New client site-22@128.219.135.135 joined. Sent token: 579bab9e-15cf-4993-8795-1d8cd73bd784.  Total clients: 33
+2025-10-02 23:28:57,104 - ClientManager - INFO - identity verified for client 'site-13'
+2025-10-02 23:28:57,105 - ClientManager - INFO - identity verified for client 'site-20'
+2025-10-02 23:28:57,105 - ClientManager - INFO - authenticated client site-13
+2025-10-02 23:28:57,105 - ClientManager - INFO - authenticated client site-20
+2025-10-02 23:28:57,105 - ClientManager - INFO - Client: New client site-13@128.219.135.135 joined. Sent token: 1bcc23a7-709e-42ab-921a-c2aa002b1417.  Total clients: 34
+2025-10-02 23:28:57,106 - ClientManager - INFO - Client: New client site-20@128.219.135.135 joined. Sent token: 3741e8bd-46dc-45dc-965f-6bb96e7cb3b2.  Total clients: 35
+2025-10-02 23:28:57,107 - ClientManager - INFO - identity verified for client 'site-42'
+2025-10-02 23:28:57,108 - ClientManager - INFO - identity verified for client 'site-25'
+2025-10-02 23:28:57,110 - ClientManager - INFO - identity verified for client 'site-2'
+2025-10-02 23:28:57,110 - ClientManager - INFO - authenticated client site-42
+2025-10-02 23:28:57,111 - ClientManager - INFO - identity verified for client 'site-31'
+2025-10-02 23:28:57,111 - ClientManager - INFO - authenticated client site-25
+2025-10-02 23:28:57,111 - ClientManager - INFO - authenticated client site-2
+2025-10-02 23:28:57,111 - ClientManager - INFO - Client: New client site-42@128.219.135.135 joined. Sent token: c9acc4eb-b3e6-4bcb-bf15-91b300c9cc39.  Total clients: 36
+2025-10-02 23:28:57,112 - ClientManager - INFO - identity verified for client 'site-48'
+2025-10-02 23:28:57,114 - ClientManager - INFO - Client: New client site-25@128.219.135.135 joined. Sent token: ff826279-39a4-405f-92a7-7492674441e3.  Total clients: 37
+2025-10-02 23:28:57,114 - ClientManager - INFO - authenticated client site-31
+2025-10-02 23:28:57,114 - ClientManager - INFO - identity verified for client 'site-47'
+2025-10-02 23:28:57,116 - ClientManager - INFO - Client: New client site-2@128.219.135.135 joined. Sent token: 6489708e-ff13-432c-978e-92874e94253b.  Total clients: 38
+2025-10-02 23:28:57,117 - ClientManager - INFO - identity verified for client 'site-8'
+2025-10-02 23:28:57,118 - ClientManager - INFO - Client: New client site-31@128.219.135.135 joined. Sent token: 46990239-cc56-46e3-ac27-d628027cf20e.  Total clients: 39
+2025-10-02 23:28:57,118 - ClientManager - INFO - identity verified for client 'site-36'
+2025-10-02 23:28:57,119 - ClientManager - INFO - authenticated client site-48
+2025-10-02 23:28:57,119 - ClientManager - INFO - identity verified for client 'site-24'
+2025-10-02 23:28:57,121 - ClientManager - INFO - authenticated client site-8
+2025-10-02 23:28:57,121 - ClientManager - INFO - authenticated client site-47
+2025-10-02 23:28:57,122 - ClientManager - INFO - identity verified for client 'site-15'
+2025-10-02 23:28:57,122 - ClientManager - INFO - authenticated client site-36
+2025-10-02 23:28:57,123 - ClientManager - INFO - identity verified for client 'site-43'
+2025-10-02 23:28:57,123 - ClientManager - INFO - Client: New client site-48@128.219.135.135 joined. Sent token: d2d06958-7a56-44c6-b985-c5ac1cc4a2e0.  Total clients: 40
+2025-10-02 23:28:57,125 - ClientManager - INFO - Client: New client site-8@128.219.135.135 joined. Sent token: d76a728e-cf53-4b4c-b292-131672a95695.  Total clients: 41
+2025-10-02 23:28:57,125 - ClientManager - INFO - authenticated client site-24
+2025-10-02 23:28:57,126 - ClientManager - INFO - identity verified for client 'site-29'
+2025-10-02 23:28:57,127 - ClientManager - INFO - Client: New client site-47@128.219.135.135 joined. Sent token: 199d5342-c98c-42c6-b2b7-a0d995b722e7.  Total clients: 42
+2025-10-02 23:28:57,128 - ClientManager - INFO - Client: New client site-36@128.219.135.135 joined. Sent token: bbe0bc98-a4a0-44f9-a6e1-65ab65782873.  Total clients: 43
+2025-10-02 23:28:57,128 - ClientManager - INFO - authenticated client site-15
+2025-10-02 23:28:57,130 - ClientManager - INFO - Client: New client site-24@128.219.135.135 joined. Sent token: 5d9b6ad7-31a8-4fdc-99e9-75d7c2e59123.  Total clients: 44
+2025-10-02 23:28:57,130 - ClientManager - INFO - authenticated client site-43
+2025-10-02 23:28:57,131 - ClientManager - INFO - identity verified for client 'site-18'
+2025-10-02 23:28:57,132 - ClientManager - INFO - Client: New client site-15@128.219.135.135 joined. Sent token: e12e5f6c-9c78-491f-8e8b-0cddac961404.  Total clients: 45
+2025-10-02 23:28:57,132 - ClientManager - INFO - authenticated client site-29
+2025-10-02 23:28:57,134 - ClientManager - INFO - Client: New client site-43@128.219.135.135 joined. Sent token: 3474c979-9fc9-496a-b4eb-55e1823834d9.  Total clients: 46
+2025-10-02 23:28:57,135 - ClientManager - INFO - Client: New client site-29@128.219.135.135 joined. Sent token: aa21a450-262a-4352-b199-bc2e9642c0be.  Total clients: 47
+2025-10-02 23:28:57,135 - ClientManager - INFO - authenticated client site-18
+2025-10-02 23:28:57,137 - ClientManager - INFO - Client: New client site-18@128.219.135.135 joined. Sent token: fec7d7f2-cada-46bb-a126-fdec7cd7b966.  Total clients: 48
+2025-10-02 23:31:32,676 - nvflare.private.fed.app.deployer.server_deployer.ServerDeployer - INFO - server heartbeat timeout set to 600
+2025-10-02 23:31:32,762 - CoreCell - INFO - server: creating listener on grpc://0:8002
+2025-10-02 23:31:32,818 - CoreCell - INFO - server: created backbone external listener for grpc://0:8002
+2025-10-02 23:31:32,818 - ConnectorManager - INFO - 1270621: Try start_listener Listener resources: {'secure': False, 'host': 'localhost'}
+2025-10-02 23:31:32,819 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connector [CH00002 PASSIVE tcp://0:34263] is starting
+2025-10-02 23:31:33,320 - CoreCell - INFO - server: created backbone internal listener for tcp://localhost:34263
+2025-10-02 23:31:33,320 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connector [CH00001 PASSIVE grpc://0:8002] is starting
+2025-10-02 23:31:33,322 - FederatedServer - INFO - max_reg_duration=60.0
+2025-10-02 23:31:33,324 - nvflare.private.fed.app.deployer.server_deployer.ServerDeployer - INFO - deployed FLARE Server.
+2025-10-02 23:31:33,336 - nvflare.fuel.hci.server.hci - INFO - Starting Admin Server localhost on Port 8003
+2025-10-02 23:31:33,336 - root - INFO - Server started
+2025-10-02 23:31:33,340 - nvflare.fuel.f3.drivers.grpc_driver.Server - INFO - added secure port at 0.0.0.0:8002
+2025-10-02 23:31:38,326 - ServerState - INFO - Got the primary sp: localhost fl_port: 8002 SSID: ebc6125d-0a56-4688-9b08-355fe9e4d61a. Turning to hot.
+2025-10-02 23:31:51,816 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00002 0.0.0.0:8002 <= ipv4:127.0.0.1:33944 SSL site-8] is created: PID: 1270621
+2025-10-02 23:31:51,819 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00003 0.0.0.0:8002 <= ipv4:127.0.0.1:33948 SSL site-3] is created: PID: 1270621
+2025-10-02 23:31:51,821 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00004 0.0.0.0:8002 <= ipv4:127.0.0.1:33956 SSL site-4] is created: PID: 1270621
+2025-10-02 23:31:51,827 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00005 0.0.0.0:8002 <= ipv4:127.0.0.1:33964 SSL site-6] is created: PID: 1270621
+2025-10-02 23:31:51,892 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00006 0.0.0.0:8002 <= ipv4:127.0.0.1:33978 SSL site-2] is created: PID: 1270621
+2025-10-02 23:31:51,900 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00007 0.0.0.0:8002 <= ipv4:127.0.0.1:33986 SSL site-7] is created: PID: 1270621
+2025-10-02 23:31:51,905 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00008 0.0.0.0:8002 <= ipv4:127.0.0.1:34002 SSL site-1] is created: PID: 1270621
+2025-10-02 23:31:51,908 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00009 0.0.0.0:8002 <= ipv4:127.0.0.1:34012 SSL site-5] is created: PID: 1270621
+2025-10-02 23:31:51,932 - FederatedServer - INFO - received challenge request from site-4: me=140018315083296
+2025-10-02 23:31:51,933 - FederatedServer - INFO - added reg session for site-4: <nvflare.private.defs.ClientRegSession object at 0x7f588dd29390>
+2025-10-02 23:31:51,977 - FederatedServer - INFO - received challenge request from site-7: me=140018315083296
+2025-10-02 23:31:51,978 - FederatedServer - INFO - added reg session for site-7: <nvflare.private.defs.ClientRegSession object at 0x7f588dd11e40>
+2025-10-02 23:31:51,981 - FederatedServer - INFO - received challenge request from site-8: me=140018315083296
+2025-10-02 23:31:51,981 - FederatedServer - INFO - added reg session for site-8: <nvflare.private.defs.ClientRegSession object at 0x7f588dd2b6d0>
+2025-10-02 23:31:51,982 - FederatedServer - INFO - received challenge request from site-5: me=140018315083296
+2025-10-02 23:31:51,988 - FederatedServer - INFO - added reg session for site-5: <nvflare.private.defs.ClientRegSession object at 0x7f588dd11de0>
+2025-10-02 23:31:51,989 - FederatedServer - INFO - received challenge request from site-3: me=140018315083296
+2025-10-02 23:31:51,990 - FederatedServer - INFO - added reg session for site-3: <nvflare.private.defs.ClientRegSession object at 0x7f588dd10550>
+2025-10-02 23:31:51,991 - FederatedServer - INFO - received challenge request from site-6: me=140018315083296
+2025-10-02 23:31:51,991 - FederatedServer - INFO - added reg session for site-6: <nvflare.private.defs.ClientRegSession object at 0x7f588dd10580>
+2025-10-02 23:31:51,992 - FederatedServer - INFO - received challenge request from site-1: me=140018315083296
+2025-10-02 23:31:51,993 - FederatedServer - INFO - added reg session for site-1: <nvflare.private.defs.ClientRegSession object at 0x7f588dd2a800>
+2025-10-02 23:31:51,994 - FederatedServer - INFO - received challenge request from site-2: me=140018315083296
+2025-10-02 23:31:51,994 - FederatedServer - INFO - added reg session for site-2: <nvflare.private.defs.ClientRegSession object at 0x7f588dd2ad40>
+2025-10-02 23:31:52,031 - ClientManager - INFO - identity verified for client 'site-7'
+2025-10-02 23:31:52,031 - ClientManager - INFO - authenticated client site-7
+2025-10-02 23:31:52,031 - ClientManager - INFO - Client: New client site-7@128.219.135.135 joined. Sent token: 2d572907-dbcc-4c28-9eb4-0e2fc07961f6.  Total clients: 1
+2025-10-02 23:31:52,033 - ClientManager - INFO - identity verified for client 'site-4'
+2025-10-02 23:31:52,034 - ClientManager - INFO - identity verified for client 'site-8'
+2025-10-02 23:31:52,035 - ClientManager - INFO - identity verified for client 'site-5'
+2025-10-02 23:31:52,035 - ClientManager - INFO - authenticated client site-4
+2025-10-02 23:31:52,036 - ClientManager - INFO - identity verified for client 'site-3'
+2025-10-02 23:31:52,036 - ClientManager - INFO - authenticated client site-8
+2025-10-02 23:31:52,036 - ClientManager - INFO - authenticated client site-5
+2025-10-02 23:31:52,037 - ClientManager - INFO - identity verified for client 'site-6'
+2025-10-02 23:31:52,037 - ClientManager - INFO - Client: New client site-4@128.219.135.135 joined. Sent token: 7aa39c84-20fc-4113-8b5a-f164e32717d9.  Total clients: 2
+2025-10-02 23:31:52,038 - ClientManager - INFO - Client: New client site-8@128.219.135.135 joined. Sent token: eb542b4a-00fa-4bf1-9735-7027e2287110.  Total clients: 3
+2025-10-02 23:31:52,038 - ClientManager - INFO - authenticated client site-3
+2025-10-02 23:31:52,039 - ClientManager - INFO - identity verified for client 'site-1'
+2025-10-02 23:31:52,040 - ClientManager - INFO - Client: New client site-5@128.219.135.135 joined. Sent token: 4b070515-4115-45e9-b678-1728d8d5ef72.  Total clients: 4
+2025-10-02 23:31:52,041 - ClientManager - INFO - identity verified for client 'site-2'
+2025-10-02 23:31:52,043 - ClientManager - INFO - Client: New client site-3@128.219.135.135 joined. Sent token: 12075afd-e91c-4568-9512-0dcfc38a36ad.  Total clients: 5
+2025-10-02 23:31:52,043 - ClientManager - INFO - authenticated client site-6
+2025-10-02 23:31:52,044 - ClientManager - INFO - authenticated client site-2
+2025-10-02 23:31:52,044 - ClientManager - INFO - authenticated client site-1
+2025-10-02 23:31:52,045 - ClientManager - INFO - Client: New client site-6@128.219.135.135 joined. Sent token: 45772f80-8cf3-4bba-8706-da4a6cf8a618.  Total clients: 6
+2025-10-02 23:31:52,046 - ClientManager - INFO - Client: New client site-2@128.219.135.135 joined. Sent token: db2a046c-5f1c-4950-84aa-275070effbac.  Total clients: 7
+2025-10-02 23:31:52,047 - ClientManager - INFO - Client: New client site-1@128.219.135.135 joined. Sent token: 0ce54a3b-6516-47ec-ac15-9406f70f630d.  Total clients: 8
+2025-10-02 23:38:17,823 - DefaultJobScheduler - INFO - [identity=test, run=?]: Try to schedule job f4b93d37-24b6-495e-b958-72a111c2f55c, get result: (scheduled).
+2025-10-02 23:38:17,824 - JobRunner - INFO - [identity=test, run=?]: Got the job: f4b93d37-24b6-495e-b958-72a111c2f55c from the scheduler to run
+2025-10-02 23:38:17,840 - JobRunner - INFO - [identity=test, run=?]: Application app deployed to the server for job: f4b93d37-24b6-495e-b958-72a111c2f55c
+2025-10-02 23:38:17,840 - JobRunner - INFO - [identity=test, run=?]: App app to be deployed to the clients: site-7,site-4,site-8,site-5,site-3,site-6,site-2,site-1 for run: f4b93d37-24b6-495e-b958-72a111c2f55c
+2025-10-02 23:38:17,862 - JobRunner - INFO - [identity=test, run=?]: Updated the schedule history of Job: f4b93d37-24b6-495e-b958-72a111c2f55c
+2025-10-02 23:38:20,904 - JobRunner - INFO - [identity=test, run=?]: Started run: f4b93d37-24b6-495e-b958-72a111c2f55c for clients: site-7,site-4,site-8,site-5,site-3,site-6,site-2,site-1
+2025-10-02 23:38:20,905 - JobRunner - INFO - [identity=test, run=?]: Job: f4b93d37-24b6-495e-b958-72a111c2f55c started to run, status changed to RUNNING.
+2025-10-02 23:38:22,287 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00010 127.0.0.1:34263 <= 127.0.0.1:52206] is created: PID: 1270621
+2025-10-02 23:38:37,461 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00011 0.0.0.0:8002 <= ipv4:127.0.0.1:43920 SSL site-7] is created: PID: 1270621
+2025-10-02 23:38:37,480 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00012 0.0.0.0:8002 <= ipv4:127.0.0.1:43930 SSL site-3] is created: PID: 1270621
+2025-10-02 23:38:37,481 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00013 0.0.0.0:8002 <= ipv4:127.0.0.1:43938 SSL site-4] is created: PID: 1270621
+2025-10-02 23:38:37,491 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00014 0.0.0.0:8002 <= ipv4:127.0.0.1:43948 SSL site-2] is created: PID: 1270621
+2025-10-02 23:38:37,512 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00015 0.0.0.0:8002 <= ipv4:127.0.0.1:43964 SSL site-5] is created: PID: 1270621
+2025-10-02 23:38:37,545 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00016 0.0.0.0:8002 <= ipv4:127.0.0.1:43978 SSL site-6] is created: PID: 1270621
+2025-10-02 23:38:37,558 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00017 0.0.0.0:8002 <= ipv4:127.0.0.1:43986 SSL site-1] is created: PID: 1270621
+2025-10-02 23:38:37,578 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00018 0.0.0.0:8002 <= ipv4:127.0.0.1:44000 SSL site-8] is created: PID: 1270621
+2025-10-02 23:42:09,805 - nvflare.private.fed.app.deployer.server_deployer.ServerDeployer - INFO - server heartbeat timeout set to 600
+2025-10-02 23:42:09,892 - CoreCell - INFO - server: creating listener on grpc://0:8002
+2025-10-02 23:42:09,955 - CoreCell - INFO - server: created backbone external listener for grpc://0:8002
+2025-10-02 23:42:09,955 - ConnectorManager - INFO - 1349304: Try start_listener Listener resources: {'secure': False, 'host': 'localhost'}
+2025-10-02 23:42:09,956 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connector [CH00002 PASSIVE tcp://0:12033] is starting
+2025-10-02 23:42:10,457 - CoreCell - INFO - server: created backbone internal listener for tcp://localhost:12033
+2025-10-02 23:42:10,458 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connector [CH00001 PASSIVE grpc://0:8002] is starting
+2025-10-02 23:42:10,459 - FederatedServer - INFO - max_reg_duration=60.0
+2025-10-02 23:42:10,461 - nvflare.private.fed.app.deployer.server_deployer.ServerDeployer - INFO - deployed FLARE Server.
+2025-10-02 23:42:10,474 - nvflare.fuel.hci.server.hci - INFO - Starting Admin Server localhost on Port 8003
+2025-10-02 23:42:10,474 - root - INFO - Server started
+2025-10-02 23:42:10,477 - nvflare.fuel.f3.drivers.grpc_driver.Server - INFO - added secure port at 0.0.0.0:8002
+2025-10-02 23:42:15,465 - ServerState - INFO - Got the primary sp: localhost fl_port: 8002 SSID: ebc6125d-0a56-4688-9b08-355fe9e4d61a. Turning to hot.
+2025-10-02 23:42:15,466 - JobRunner - INFO - Update the previous running job: f4b93d37-24b6-495e-b958-72a111c2f55c to FINISHED:ABANDONED.
+2025-10-02 23:42:34,360 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00002 0.0.0.0:8002 <= ipv4:127.0.0.1:50722 SSL site-2] is created: PID: 1349304
+2025-10-02 23:42:34,362 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00003 0.0.0.0:8002 <= ipv4:127.0.0.1:50736 SSL site-1] is created: PID: 1349304
+2025-10-02 23:42:34,364 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00004 0.0.0.0:8002 <= ipv4:127.0.0.1:50738 SSL site-4] is created: PID: 1349304
+2025-10-02 23:42:34,394 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00005 0.0.0.0:8002 <= ipv4:127.0.0.1:50740 SSL site-3] is created: PID: 1349304
+2025-10-02 23:42:34,396 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00006 0.0.0.0:8002 <= ipv4:127.0.0.1:50756 SSL site-8] is created: PID: 1349304
+2025-10-02 23:42:34,402 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00007 0.0.0.0:8002 <= ipv4:127.0.0.1:50760 SSL site-6] is created: PID: 1349304
+2025-10-02 23:42:34,406 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00008 0.0.0.0:8002 <= ipv4:127.0.0.1:50768 SSL site-7] is created: PID: 1349304
+2025-10-02 23:42:34,423 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00009 0.0.0.0:8002 <= ipv4:127.0.0.1:50780 SSL site-5] is created: PID: 1349304
+2025-10-02 23:42:34,462 - FederatedServer - INFO - received challenge request from site-2: me=140469226536576
+2025-10-02 23:42:34,462 - FederatedServer - INFO - added reg session for site-2: <nvflare.private.defs.ClientRegSession object at 0x7fc18a3d13f0>
+2025-10-02 23:42:34,507 - FederatedServer - INFO - received challenge request from site-7: me=140469226536576
+2025-10-02 23:42:34,509 - FederatedServer - INFO - added reg session for site-7: <nvflare.private.defs.ClientRegSession object at 0x7fc18a3b2b00>
+2025-10-02 23:42:34,512 - FederatedServer - INFO - received challenge request from site-4: me=140469226536576
+2025-10-02 23:42:34,513 - FederatedServer - INFO - added reg session for site-4: <nvflare.private.defs.ClientRegSession object at 0x7fc18a3d3760>
+2025-10-02 23:42:34,514 - FederatedServer - INFO - received challenge request from site-5: me=140469226536576
+2025-10-02 23:42:34,520 - FederatedServer - INFO - added reg session for site-5: <nvflare.private.defs.ClientRegSession object at 0x7fc18a3b2ad0>
+2025-10-02 23:42:34,521 - FederatedServer - INFO - received challenge request from site-6: me=140469226536576
+2025-10-02 23:42:34,522 - FederatedServer - INFO - added reg session for site-6: <nvflare.private.defs.ClientRegSession object at 0x7fc18a3b0dc0>
+2025-10-02 23:42:34,523 - FederatedServer - INFO - received challenge request from site-8: me=140469226536576
+2025-10-02 23:42:34,523 - FederatedServer - INFO - added reg session for site-8: <nvflare.private.defs.ClientRegSession object at 0x7fc18a36ffa0>
+2025-10-02 23:42:34,525 - FederatedServer - INFO - received challenge request from site-3: me=140469226536576
+2025-10-02 23:42:34,525 - FederatedServer - INFO - added reg session for site-3: <nvflare.private.defs.ClientRegSession object at 0x7fc18a3b1240>
+2025-10-02 23:42:34,526 - FederatedServer - INFO - received challenge request from site-1: me=140469226536576
+2025-10-02 23:42:34,526 - FederatedServer - INFO - added reg session for site-1: <nvflare.private.defs.ClientRegSession object at 0x7fc18a3d2d40>
+2025-10-02 23:42:34,563 - ClientManager - INFO - identity verified for client 'site-7'
+2025-10-02 23:42:34,564 - ClientManager - INFO - identity verified for client 'site-2'
+2025-10-02 23:42:34,565 - ClientManager - INFO - identity verified for client 'site-4'
+2025-10-02 23:42:34,565 - ClientManager - INFO - authenticated client site-7
+2025-10-02 23:42:34,565 - ClientManager - INFO - authenticated client site-2
+2025-10-02 23:42:34,566 - ClientManager - INFO - authenticated client site-4
+2025-10-02 23:42:34,566 - ClientManager - INFO - identity verified for client 'site-5'
+2025-10-02 23:42:34,567 - ClientManager - INFO - Client: New client site-7@128.219.135.135 joined. Sent token: ae82afa9-2b9a-4e1d-9f14-89017895e71c.  Total clients: 1
+2025-10-02 23:42:34,568 - ClientManager - INFO - identity verified for client 'site-6'
+2025-10-02 23:42:34,569 - ClientManager - INFO - Client: New client site-2@128.219.135.135 joined. Sent token: 80c8f971-e9a8-41d7-a9c5-097b8fa74887.  Total clients: 2
+2025-10-02 23:42:34,570 - ClientManager - INFO - identity verified for client 'site-8'
+2025-10-02 23:42:34,571 - ClientManager - INFO - identity verified for client 'site-3'
+2025-10-02 23:42:34,572 - ClientManager - INFO - Client: New client site-4@128.219.135.135 joined. Sent token: 59fcaee9-3f91-473f-9bb0-eeb2b436c281.  Total clients: 3
+2025-10-02 23:42:34,573 - ClientManager - INFO - identity verified for client 'site-1'
+2025-10-02 23:42:34,575 - ClientManager - INFO - authenticated client site-6
+2025-10-02 23:42:34,575 - ClientManager - INFO - authenticated client site-8
+2025-10-02 23:42:34,575 - ClientManager - INFO - authenticated client site-3
+2025-10-02 23:42:34,575 - ClientManager - INFO - authenticated client site-5
+2025-10-02 23:42:34,575 - ClientManager - INFO - authenticated client site-1
+2025-10-02 23:42:34,576 - ClientManager - INFO - Client: New client site-6@128.219.135.135 joined. Sent token: ca021d5c-74fc-4729-b2e0-171fcf20337e.  Total clients: 4
+2025-10-02 23:42:34,577 - ClientManager - INFO - Client: New client site-8@128.219.135.135 joined. Sent token: f54a0bc1-ff22-4c3f-82d5-02a066ff0297.  Total clients: 5
+2025-10-02 23:42:34,579 - ClientManager - INFO - Client: New client site-3@128.219.135.135 joined. Sent token: 2cbbfdb4-636e-464a-96f9-6d515dab944c.  Total clients: 6
+2025-10-02 23:42:34,580 - ClientManager - INFO - Client: New client site-5@128.219.135.135 joined. Sent token: 1774bd25-e3a7-4edf-927a-6ca37dc329af.  Total clients: 7
+2025-10-02 23:42:34,581 - ClientManager - INFO - Client: New client site-1@128.219.135.135 joined. Sent token: 51c25db8-ccd7-4a9d-bf75-e6cb038601ee.  Total clients: 8
+2025-10-02 23:42:55,542 - DefaultJobScheduler - INFO - [identity=test, run=?]: Try to schedule job de67ee28-8498-461e-a0c5-bf788cf7c9fe, get result: (scheduled).
+2025-10-02 23:42:55,542 - JobRunner - INFO - [identity=test, run=?]: Got the job: de67ee28-8498-461e-a0c5-bf788cf7c9fe from the scheduler to run
+2025-10-02 23:42:55,557 - JobRunner - INFO - [identity=test, run=?]: Application app deployed to the server for job: de67ee28-8498-461e-a0c5-bf788cf7c9fe
+2025-10-02 23:42:55,557 - JobRunner - INFO - [identity=test, run=?]: App app to be deployed to the clients: site-7,site-2,site-4,site-6,site-8,site-3,site-5,site-1 for run: de67ee28-8498-461e-a0c5-bf788cf7c9fe
+2025-10-02 23:42:55,578 - JobRunner - INFO - [identity=test, run=?]: Updated the schedule history of Job: de67ee28-8498-461e-a0c5-bf788cf7c9fe
+2025-10-02 23:42:59,933 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00010 127.0.0.1:12033 <= 127.0.0.1:49716] is created: PID: 1349304
+2025-10-02 23:43:01,705 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00008 Not Connected] is closed PID: 1349304
+2025-10-02 23:43:01,706 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00003 Not Connected] is closed PID: 1349304
+2025-10-02 23:43:01,706 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00009 Not Connected] is closed PID: 1349304
+2025-10-02 23:43:02,980 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00011 0.0.0.0:8002 <= ipv4:127.0.0.1:54238 SSL site-7] is created: PID: 1349304
+2025-10-02 23:43:03,005 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00012 0.0.0.0:8002 <= ipv4:127.0.0.1:54254 SSL site-1] is created: PID: 1349304
+2025-10-02 23:43:03,035 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00013 0.0.0.0:8002 <= ipv4:127.0.0.1:54264 SSL site-5] is created: PID: 1349304
+2025-10-02 23:43:11,908 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00014 0.0.0.0:8002 <= ipv4:127.0.0.1:36444 SSL site-8] is created: PID: 1349304
+2025-10-02 23:43:11,912 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00015 0.0.0.0:8002 <= ipv4:127.0.0.1:36446 SSL site-4] is created: PID: 1349304
+2025-10-02 23:43:11,917 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00016 0.0.0.0:8002 <= ipv4:127.0.0.1:36460 SSL site-6] is created: PID: 1349304
+2025-10-02 23:43:11,946 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00017 0.0.0.0:8002 <= ipv4:127.0.0.1:36462 SSL site-2] is created: PID: 1349304
+2025-10-02 23:43:11,955 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00018 0.0.0.0:8002 <= ipv4:127.0.0.1:36464 SSL site-3] is created: PID: 1349304
+2025-10-02 23:43:12,015 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00019 0.0.0.0:8002 <= ipv4:127.0.0.1:36472 SSL site-5] is created: PID: 1349304
+2025-10-02 23:43:12,063 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00020 0.0.0.0:8002 <= ipv4:127.0.0.1:36476 SSL site-1] is created: PID: 1349304
+2025-10-02 23:43:12,084 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00021 0.0.0.0:8002 <= ipv4:127.0.0.1:36490 SSL site-7] is created: PID: 1349304
+2025-10-02 23:43:18,602 - CoreCell - ERROR - [ME=server O=? D=site-7 F=? T=? CH=admin TP=admin SCH=? STP=? SEQ=?] timeout on Request 8307a007-4279-4b1b-81fa-9215714a9b66 for ['admin'] after 20 secs
+2025-10-02 23:43:18,605 - JobRunner - INFO - [identity=test, run=?]: Started run: de67ee28-8498-461e-a0c5-bf788cf7c9fe for clients: site-7,site-2,site-4,site-6,site-8,site-3,site-5,site-1
+2025-10-02 23:43:18,613 - JobRunner - INFO - [identity=test, run=?]: Job: de67ee28-8498-461e-a0c5-bf788cf7c9fe started to run, status changed to RUNNING.
+2025-10-02 23:47:21,896 - ServerEngine - INFO - Abort the server app run.
+2025-10-02 23:47:22,898 - ServerEngine - INFO - Abort server status: None
+2025-10-02 23:47:22,899 - JobRunner - INFO - [identity=test, run=?]: Stop the job run: de67ee28-8498-461e-a0c5-bf788cf7c9fe
+2025-10-02 23:47:22,901 - Cell - WARNING - Receiving unknown req_id='4aa64c7e-1c72-46b7-82de-a6f8e3935969', discarded: '4aa64c7e-1c72-46b7-82de-a6f8e3935969'
+2025-10-02 23:47:24,778 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00010 Not Connected] is closed PID: 1349304
+2025-10-02 23:47:24,840 - nvflare.app_common.storages.filesystem_storage - INFO - /tmp/nvflare/jobs-storage/de67ee28-8498-461e-a0c5-bf788cf7c9fe/workspace does not exist, skipping the creation of the symlink /lustre/orion/csc666/proj-shared/ducnguyen/new_nvflare_edge/AMD_NVFlare/example_intranode/localhost/startup/../transfer/039e7778-4112-44a5-a1ba-9ae04167e6d2/de67ee28-8498-461e-a0c5-bf788cf7c9fe/workspace.zip for download.
+2025-10-02 23:47:25,875 - ClientManager - INFO - Client Name:site-2 	Token: 80c8f971-e9a8-41d7-a9c5-097b8fa74887 left.  Total clients: 7
+2025-10-02 23:47:25,875 - ServerEngine - WARNING - notified SJ of dead-job: job_id='de67ee28-8498-461e-a0c5-bf788cf7c9fe'; client_name='site-2'; reason='client dead'
+2025-10-02 23:47:25,876 - ClientManager - INFO - Client Name:site-4 	Token: 59fcaee9-3f91-473f-9bb0-eeb2b436c281 left.  Total clients: 6
+2025-10-02 23:47:25,879 - ServerEngine - WARNING - notified SJ of dead-job: job_id='de67ee28-8498-461e-a0c5-bf788cf7c9fe'; client_name='site-4'; reason='client dead'
+2025-10-02 23:47:25,880 - ClientManager - INFO - Client Name:site-8 	Token: f54a0bc1-ff22-4c3f-82d5-02a066ff0297 left.  Total clients: 5
+2025-10-02 23:47:25,883 - ServerEngine - WARNING - notified SJ of dead-job: job_id='de67ee28-8498-461e-a0c5-bf788cf7c9fe'; client_name='site-8'; reason='client dead'
+2025-10-02 23:47:25,883 - ClientManager - INFO - Client Name:site-6 	Token: ca021d5c-74fc-4729-b2e0-171fcf20337e left.  Total clients: 4
+2025-10-02 23:47:25,884 - ServerEngine - WARNING - notified SJ of dead-job: job_id='de67ee28-8498-461e-a0c5-bf788cf7c9fe'; client_name='site-6'; reason='client dead'
+2025-10-02 23:47:25,885 - ClientManager - INFO - Client Name:site-5 	Token: 1774bd25-e3a7-4edf-927a-6ca37dc329af left.  Total clients: 3
+2025-10-02 23:47:25,888 - ServerEngine - WARNING - notified SJ of dead-job: job_id='de67ee28-8498-461e-a0c5-bf788cf7c9fe'; client_name='site-5'; reason='client dead'
+2025-10-02 23:47:25,888 - ClientManager - INFO - Client Name:site-7 	Token: ae82afa9-2b9a-4e1d-9f14-89017895e71c left.  Total clients: 2
+2025-10-02 23:47:25,890 - ServerEngine - WARNING - notified SJ of dead-job: job_id='de67ee28-8498-461e-a0c5-bf788cf7c9fe'; client_name='site-7'; reason='client dead'
+2025-10-02 23:47:25,890 - ClientManager - INFO - Client Name:site-1 	Token: 51c25db8-ccd7-4a9d-bf75-e6cb038601ee left.  Total clients: 1
+2025-10-02 23:47:25,891 - ServerEngine - WARNING - notified SJ of dead-job: job_id='de67ee28-8498-461e-a0c5-bf788cf7c9fe'; client_name='site-1'; reason='client dead'
+2025-10-02 23:47:25,891 - ClientManager - INFO - Client Name:site-3 	Token: 2cbbfdb4-636e-464a-96f9-6d515dab944c left.  Total clients: 0
+2025-10-02 23:47:25,892 - ServerEngine - WARNING - notified SJ of dead-job: job_id='de67ee28-8498-461e-a0c5-bf788cf7c9fe'; client_name='site-3'; reason='client dead'
+2025-10-02 23:47:25,899 - ServerEngine - INFO - FL server shutdown.
+2025-10-02 23:47:25,901 - ServerEngine - INFO - Abort the server app run.
+2025-10-02 23:47:25,902 - ServerEngine - INFO - Abort server status: None
+2025-10-02 23:47:25,903 - JobRunner - INFO - [identity=test, run=?]: Stop the job run: de67ee28-8498-461e-a0c5-bf788cf7c9fe
+2025-10-02 23:47:25,903 - JobRunner - INFO - [identity=test, run=?]: Stop all the running jobs.
+2025-10-02 23:47:25,903 - FederatedServer - INFO - shutting down server
+2025-10-02 23:47:25,904 - FederatedServer - INFO - canceling sync locks
+2025-10-02 23:47:25,904 - FederatedServer - INFO - server off
+2025-10-02 23:47:26,900 - nvflare.fuel.hci.server.hci - INFO - Admin Server localhost on Port 8003 shutdown!
+2025-10-02 23:47:27,067 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00016 Not Connected] is closed PID: 1349304
+2025-10-02 23:47:28,475 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00007 Not Connected] is closed PID: 1349304
+2025-10-02 23:47:28,476 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00002 Not Connected] is closed PID: 1349304
+2025-10-02 23:47:28,480 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00005 Not Connected] is closed PID: 1349304
+2025-10-02 23:47:28,483 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00011 Not Connected] is closed PID: 1349304
+2025-10-02 23:47:28,604 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00021 Not Connected] is closed PID: 1349304
+2025-10-02 23:47:28,681 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00013 Not Connected] is closed PID: 1349304
+2025-10-02 23:47:28,805 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00017 Not Connected] is closed PID: 1349304
+2025-10-02 23:47:28,876 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00004 Not Connected] is closed PID: 1349304
+2025-10-02 23:47:28,881 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00006 Not Connected] is closed PID: 1349304
+2025-10-02 23:47:28,881 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00012 Not Connected] is closed PID: 1349304
+2025-10-02 23:47:29,223 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00015 Not Connected] is closed PID: 1349304
+2025-10-02 23:47:29,405 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00020 Not Connected] is closed PID: 1349304
+2025-10-02 23:47:29,406 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00019 Not Connected] is closed PID: 1349304
+2025-10-02 23:47:29,406 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00018 Not Connected] is closed PID: 1349304
+2025-10-02 23:47:29,407 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00014 Not Connected] is closed PID: 1349304
+2025-10-02 23:47:29,411 - MPM - INFO - MPM: Good Bye!

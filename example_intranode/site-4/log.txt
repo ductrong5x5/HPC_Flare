@@ -1,0 +1,66 @@
+2025-10-02 23:28:54,205 - CoreCell - INFO - site-4: created backbone external connector to grpc://localhost:8002
+2025-10-02 23:28:54,205 - ConnectorManager - INFO - 1251963: Try start_listener Listener resources: {'secure': False, 'host': 'localhost'}
+2025-10-02 23:28:54,206 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connector [CH00002 PASSIVE tcp://0:27632] is starting
+2025-10-02 23:28:54,707 - CoreCell - INFO - site-4: created backbone internal listener for tcp://localhost:27632
+2025-10-02 23:28:54,708 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connector [CH00001 ACTIVE grpc://localhost:8002] is starting
+2025-10-02 23:28:54,709 - FederatedClient - INFO - Wait for engine to be created.
+2025-10-02 23:28:54,717 - nvflare.fuel.f3.drivers.grpc_driver.GrpcDriver - INFO - created secure channel at localhost:8002
+2025-10-02 23:28:54,717 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00002 N/A => localhost:8002] is created: PID: 1251963
+2025-10-02 23:28:55,106 - Communicator - INFO - challenge result: ok 
+2025-10-02 23:28:55,106 - Communicator - INFO - verified server identity 'localhost'
+2025-10-02 23:28:55,148 - Communicator - INFO - sent identity info for client site-4
+2025-10-02 23:28:55,149 - Communicator - INFO - Trying to register with server ...
+2025-10-02 23:28:55,207 - Communicator - INFO - register RC: ok
+2025-10-02 23:28:55,208 - FederatedClient - INFO - Successfully registered client:site-4 for project test. Token:5da0bd19-35cb-4e32-8760-dd0dd425ea48 SSID:ebc6125d-0a56-4688-9b08-355fe9e4d61a
+2025-10-02 23:28:55,213 - FederatedClient - INFO - Got engine after 0.5044112205505371 seconds
+2025-10-02 23:28:55,214 - FederatedClient - INFO - Got the new primary SP: grpc://localhost:8002
+2025-10-02 23:31:51,071 - CoreCell - INFO - site-4: created backbone external connector to grpc://localhost:8002
+2025-10-02 23:31:51,071 - ConnectorManager - INFO - 1274039: Try start_listener Listener resources: {'secure': False, 'host': 'localhost'}
+2025-10-02 23:31:51,072 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connector [CH00002 PASSIVE tcp://0:42029] is starting
+2025-10-02 23:31:51,574 - CoreCell - INFO - site-4: created backbone internal listener for tcp://localhost:42029
+2025-10-02 23:31:51,574 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connector [CH00001 ACTIVE grpc://localhost:8002] is starting
+2025-10-02 23:31:51,576 - FederatedClient - INFO - Wait for engine to be created.
+2025-10-02 23:31:51,587 - nvflare.fuel.f3.drivers.grpc_driver.GrpcDriver - INFO - created secure channel at localhost:8002
+2025-10-02 23:31:51,587 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00002 N/A => localhost:8002] is created: PID: 1274039
+2025-10-02 23:31:51,987 - Communicator - INFO - challenge result: ok 
+2025-10-02 23:31:51,987 - Communicator - INFO - verified server identity 'localhost'
+2025-10-02 23:31:52,031 - Communicator - INFO - sent identity info for client site-4
+2025-10-02 23:31:52,031 - Communicator - INFO - Trying to register with server ...
+2025-10-02 23:31:52,039 - Communicator - INFO - register RC: ok
+2025-10-02 23:31:52,039 - FederatedClient - INFO - Successfully registered client:site-4 for project test. Token:7aa39c84-20fc-4113-8b5a-f164e32717d9 SSID:ebc6125d-0a56-4688-9b08-355fe9e4d61a
+2025-10-02 23:31:52,045 - FederatedClient - INFO - Got engine after 0.46927833557128906 seconds
+2025-10-02 23:31:52,045 - FederatedClient - INFO - Got the new primary SP: grpc://localhost:8002
+2025-10-02 23:38:20,880 - ClientEngine - INFO - Starting client app. rank: 0
+2025-10-02 23:38:20,898 - ProcessExecutor - INFO - Worker child process ID: 1307729
+2025-10-02 23:38:20,898 - ProcessExecutor - INFO - run (f4b93d37-24b6-495e-b958-72a111c2f55c): waiting for child worker process to finish.
+2025-10-02 23:38:37,235 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00003 127.0.0.1:42029 <= 127.0.0.1:36384] is created: PID: 1274039
+2025-10-02 23:42:33,612 - CoreCell - INFO - site-4: created backbone external connector to grpc://localhost:8002
+2025-10-02 23:42:33,613 - ConnectorManager - INFO - 1353234: Try start_listener Listener resources: {'secure': False, 'host': 'localhost'}
+2025-10-02 23:42:33,614 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connector [CH00002 PASSIVE tcp://0:4099] is starting
+2025-10-02 23:42:34,115 - CoreCell - INFO - site-4: created backbone internal listener for tcp://localhost:4099
+2025-10-02 23:42:34,115 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connector [CH00001 ACTIVE grpc://localhost:8002] is starting
+2025-10-02 23:42:34,116 - FederatedClient - INFO - Wait for engine to be created.
+2025-10-02 23:42:34,127 - nvflare.fuel.f3.drivers.grpc_driver.GrpcDriver - INFO - created secure channel at localhost:8002
+2025-10-02 23:42:34,128 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00002 N/A => localhost:8002] is created: PID: 1353234
+2025-10-02 23:42:34,520 - Communicator - INFO - challenge result: ok 
+2025-10-02 23:42:34,521 - Communicator - INFO - verified server identity 'localhost'
+2025-10-02 23:42:34,563 - Communicator - INFO - sent identity info for client site-4
+2025-10-02 23:42:34,563 - Communicator - INFO - Trying to register with server ...
+2025-10-02 23:42:34,575 - Communicator - INFO - register RC: ok
+2025-10-02 23:42:34,575 - FederatedClient - INFO - Successfully registered client:site-4 for project test. Token:59fcaee9-3f91-473f-9bb0-eeb2b436c281 SSID:ebc6125d-0a56-4688-9b08-355fe9e4d61a
+2025-10-02 23:42:34,577 - FederatedClient - INFO - Got engine after 0.4605739116668701 seconds
+2025-10-02 23:42:34,577 - FederatedClient - INFO - Got the new primary SP: grpc://localhost:8002
+2025-10-02 23:42:58,603 - ClientEngine - INFO - Starting client app. rank: 0
+2025-10-02 23:42:58,618 - ProcessExecutor - INFO - Worker child process ID: 1361078
+2025-10-02 23:42:58,619 - ProcessExecutor - INFO - run (de67ee28-8498-461e-a0c5-bf788cf7c9fe): waiting for child worker process to finish.
+2025-10-02 23:43:11,655 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00003 127.0.0.1:4099 <= 127.0.0.1:47042] is created: PID: 1353234
+2025-10-02 23:47:24,896 - ClientEngine - INFO - Client shutdown...
+2025-10-02 23:47:25,874 - FederatedClient - INFO - Shutting down client run: site-4
+2025-10-02 23:47:25,882 - FederatedClient - INFO - Logout client: site-4 from server.
+2025-10-02 23:47:28,874 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00003 Not Connected] is closed PID: 1353234
+2025-10-02 23:47:28,874 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00002 Not Connected] is closed PID: 1353234
+2025-10-02 23:47:28,920 - nvflare.fuel.f3.drivers.grpc_driver.GrpcDriver - INFO - CLIENT: finished connection [CN00002 Not Connected]
+2025-10-02 23:47:29,872 - MPM - WARNING - ======== MPM: Cleanup did not complete within 1.5 secs
+2025-10-02 23:47:29,873 - MPM - INFO - MPM: Good Bye!
+2025-10-02 23:47:29,913 - ProcessExecutor - INFO - run (de67ee28-8498-461e-a0c5-bf788cf7c9fe): child worker process terminated
+2025-10-02 23:47:29,913 - ProcessExecutor - INFO - Client worker process is terminated.

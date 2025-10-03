@@ -1,20 +1,18 @@
 {
   "format_version": 2,
-  "submit_task_result_timeout":6000,
-  "get_task_timeout":6000,
-  "max_runner_sync_tries":6000,
-  "max_runner_sync_timeout":6000,
-  "task_check_timeout":6000,
-  "task_check_interval":10,
-  "cell_wait_timeout":6000,
-  "end_run_readiness_timeout":6000,
-  "runner_sync_timeout":10,
-  "job_heartbeat_interval":150,
-  "end_run_readiness_timeout":100,
-  "end_run_readiness_check_interval":2,
-  "DATASET_ROOT": "/lustre/orion/csc666/proj-shared/oliko/scalable/Frontier/fedmetrix/debug_and_package/example_working/NLP_example_with_privacy/Data_set/nlp-ner-neena",
+  "submit_task_result_timeout": 6000,
+  "get_task_timeout": 6000,
+  "max_runner_sync_tries": 6000,
+  "max_runner_sync_timeout": 6000,
+  "task_check_timeout": 6000,
+  "task_check_interval": 10,
+  "cell_wait_timeout": 6000,
+  "end_run_readiness_timeout": 100,
+  "runner_sync_timeout": 10,
+  "job_heartbeat_interval": 150,
+  "end_run_readiness_check_interval": 2,
+  "DATASET_ROOT": "/lustre/orion/csc666/proj-shared/ducnguyen/new_nvflare_edge/AMD_NVFlare/experiment_folder/data/nlp-ner",
   "option": "16_split",
-
   "executors": [
     {
       "tasks": [
@@ -30,29 +28,25 @@
       }
     }
   ],
-
   "task_result_filters": [
     {
-      "tasks":[
+      "tasks": [
         "train"
       ],
-      "filters":[
+      "filters": [
         {
-          "path":"nvflare.app_common.filters.privacy_from_petina.PrivacyPetinaLibrary",
+          "path": "nvflare.app_common.filters.privacy_from_petina.PrivacyPetinaLibrary",
           "args": {
             "privacy_technique": "gaussian",
-            "epsilon": 1.0,
+            "epsilon": 1,
             "gamma": 1e-05,
-            "delta": 1e-04
-        
-          } 
+            "delta": 0.0001
+          }
         }
       ]
     }
   ],
-  "task_data_filters": [
-  ],
-
+  "task_data_filters": [],
   "components": [
     {
       "id": "nlp-learner",
@@ -60,7 +54,7 @@
       "args": {
         "data_path": "{DATASET_ROOT}/{option}",
         "model_name": "bert-base-uncased",
-        "learning_rate": 1e-5,
+        "learning_rate": 1e-05,
         "batch_size": 16,
         "num_labels": 3,
         "aggregation_epochs": 1

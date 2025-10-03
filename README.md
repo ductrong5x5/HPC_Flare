@@ -97,7 +97,21 @@ Step5: Multiple node case - Internode
     - `srun --ntasks=$NUM_CLIENTS --nodes=6  --ntasks-per-gpu=8  --gpu-bind=closest setup.sh $NAME frontier client & `
 
 Step6: Intranode - multiple clients in one node
+- If SLurm allow multiple srun on 1 node, do like below: (example of 48 clients)
     - Change `#SBATCH --nodes=1`
     - `#SBATCH --ntasks=49`
     - `export JOB_NAME=bert_ncbi_gaussian_48`
     - `srun --ntasks=$NUM_CLIENTS --nodes=1  --ntasks-per-gpu=8  --gpu-bind=closest setup.sh $NAME frontier client & `
+
+- The above not work:
+    - we have to manually do it on the system by doing `salloc` first.
+    - Then activate the python env `source python_env/env/bin/activate`
+    - set location variable `export LOCATION=$(pwd)`
+    - set variable for job name ` export JOB="bert_ncbi_gaussian_8"`
+    - setup HF `export HF_HOME=$LOCATION/hf_home `
+    - `export HF_HUB_DISABLE_TELEMETRY=1`
+    - Then run `./1_setup_intranode.sh` to update client data path
+    - Then we start the server with `./example_intranode/localhost/startup/start.sh`
+    - Then we can run `./2_run_client.sh` to run number of clients
+    - If you want to kill the Flare server and clients process, run`./kill.sh`
+
