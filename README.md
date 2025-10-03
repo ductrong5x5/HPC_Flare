@@ -94,17 +94,17 @@ Step5: Multiple node case - Internode
     - `export JOB_NAME=bert_ncbi_gaussian_24`
     - `srun --ntasks=$NUM_CLIENTS --nodes=3  --ntasks-per-gpu=8  --gpu-bind=closest setup.sh $NAME frontier client & `
 - Case 32 clients multiple node
-    - Change `#SBATCH --nodes=4`
+    - Change `#SBATCH --nodes=5`
     - `#SBATCH --ntasks=33`
     - `export JOB_NAME=bert_ncbi_gaussian_32`
     - `srun --ntasks=$NUM_CLIENTS --nodes=4  --ntasks-per-gpu=8  --gpu-bind=closest setup.sh $NAME frontier client & `
 - Case 40 clients multiple node
-    - Change `#SBATCH --nodes=5`
+    - Change `#SBATCH --nodes=6`
     - `#SBATCH --ntasks=41`
     - `export JOB_NAME=bert_ncbi_gaussian_40`
     - `srun --ntasks=$NUM_CLIENTS --nodes=5  --ntasks-per-gpu=8  --gpu-bind=closest setup.sh $NAME frontier client & `
 - Case 48 clients multiple node
-    - Change `#SBATCH --nodes=6`
+    - Change `#SBATCH --nodes=7`
     - `#SBATCH --ntasks=49`
     - `export JOB_NAME=bert_ncbi_gaussian_48`
     - `srun --ntasks=$NUM_CLIENTS --nodes=6  --ntasks-per-gpu=8  --gpu-bind=closest setup.sh $NAME frontier client & `
