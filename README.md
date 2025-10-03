@@ -86,23 +86,23 @@ Step5: Multiple node case - Internode
     - Change `#SBATCH --nodes=3`
     - `#SBATCH --ntasks=17`
     - `export JOB_NAME=bert_ncbi_gaussian_16`
-    - `srun --ntasks=$NUM_CLIENTS --nodes=2  --ntasks-per-gpu=8  --gpu-bind=closest setup.sh $NAME frontier client & `
+    - `srun --ntasks=$NUM_CLIENTS --nodes=2  --ntasks-per-gpu=8 --gpus-per-node=1  --gpu-bind=closest setup.sh $NAME frontier client & `
 
 - Case 24 clients multiple node
     - Change `#SBATCH --nodes=4`
     - `#SBATCH --ntasks=25`
     - `export JOB_NAME=bert_ncbi_gaussian_24`
-    - `srun --ntasks=$NUM_CLIENTS --nodes=3  --ntasks-per-gpu=8  --gpu-bind=closest setup.sh $NAME frontier client & `
+    - `srun --ntasks=$NUM_CLIENTS --nodes=3  --ntasks-per-gpu=8 --gpus-per-node=1  --gpu-bind=closest setup.sh $NAME frontier client & `
 - Case 32 clients multiple node
     - Change `#SBATCH --nodes=5`
     - `#SBATCH --ntasks=33`
     - `export JOB_NAME=bert_ncbi_gaussian_32`
-    - `srun --ntasks=$NUM_CLIENTS --nodes=4  --ntasks-per-gpu=8  --gpu-bind=closest setup.sh $NAME frontier client & `
+    - `srun --ntasks=$NUM_CLIENTS --nodes=4  --ntasks-per-gpu=8 --gpus-per-node=1 --gpu-bind=closest setup.sh $NAME frontier client & `
 - Case 48 clients multiple node
     - Change `#SBATCH --nodes=7`
     - `#SBATCH --ntasks=49`
     - `export JOB_NAME=bert_ncbi_gaussian_48`
-    - `srun --ntasks=$NUM_CLIENTS --nodes=6  --ntasks-per-gpu=8  --gpu-bind=closest setup.sh $NAME frontier client & `
+    - `srun --ntasks=$NUM_CLIENTS --nodes=6  --ntasks-per-gpu=8 --gpus-per-node=1 --gpu-bind=closest setup.sh $NAME frontier client & `
 
 Step6: Intranode - multiple clients in one node
 - If SLurm allow multiple srun on 1 node, do like below: (example of 48 clients)

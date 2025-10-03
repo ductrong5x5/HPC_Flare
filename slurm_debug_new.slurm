@@ -81,7 +81,7 @@ done
 echo "Server is ready. Starting client srun..."
 # ===== Launch clients =====
 #8 clients per node, 8 clients per gpu
-srun --ntasks=$NUM_CLIENTS --nodes=1 --ntasks-per-gpu=8  --gpu-bind=closest setup.sh $NAME frontier client &         #No change
+srun --ntasks=$NUM_CLIENTS --nodes=1 --ntasks-per-gpu=8 --gpus-per-node=1 --gpu-bind=closest setup.sh $NAME frontier client &         #No change
  
 # # ===== Post-processing =====
 sleep 60s
