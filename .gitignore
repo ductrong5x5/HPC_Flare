@@ -13,7 +13,7 @@ hf_home/
 # Logs and experiments
 logs/
 example/
-example_intranode/
+
 # System files
 .DS_Store
 
