@@ -3,8 +3,8 @@ __pycache__/
 *.pyc
 
 # Virtual environment
+env/
 
-python_env/
 
 # Hugging Face / model cache
 model/

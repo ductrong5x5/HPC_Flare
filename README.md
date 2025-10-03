@@ -1,5 +1,6 @@
 Step1: Create python-env or conda-env and doing setup
 ---
+- cd 
 - python -m venv env
 - source source env/bin/activate
 - pip install seaborn pandas transformers seqeval tensorboard tensorflow
