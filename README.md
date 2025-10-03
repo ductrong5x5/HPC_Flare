@@ -56,7 +56,7 @@ Step4: submit slurm job
 - `export LOG_LEVEL=INFO` is the output of logging for clients and server.
 - `export JOB_NAME=bert_ncbi_gaussian_8` is the job you want to start
 - `export MEM_EACH_GPU=60` memory of each gpu in Frontier is about 64GB, but I will put 60 (or less than or equal 64-63) here
--   Since some module is require to load on Frontier, I need to put them here. I don't know if LUMI will need these.
+-   Since some module is require to load on Frontier, I need to put them here. I don't know if LUMI will need these. `slurm_debug_new.slurm`, `admin_new.sh`, `start.sh` will have the below module.
     ```
     module load PrgEnv-gnu/8.5.0
     module load miniforge3/23.11.0-0

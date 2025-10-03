@@ -27,7 +27,7 @@ cd "$PARENT_DIR" || exit 1
 # Show IPv4
 ip -4 a | grep "inet"
 
-# Load environment modules
+# Load environment modules 
 module load PrgEnv-gnu/8.5.0
 module load miniforge3/23.11.0-0
 module load rocm/5.6.0
