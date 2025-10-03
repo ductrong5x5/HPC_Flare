@@ -34,7 +34,7 @@ from nvflare.app_common.app_constant import AppConstants, ValidateType
 from nvflare.app_opt.pt.fedproxloss import PTFedProxLoss #Add fedprox
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
-
+location = os.environ.get("LOCATION")
 class NLPLearner(Learner):
     def __init__(
         self,
@@ -146,12 +146,16 @@ class NLPLearner(Learner):
             fl_ctx,
             f"Creating model {self.model_name}",
         )
+        
         if self.model_name == "bert-base-uncased":
-            self.model = BertModel(model_name="/lustre/orion/csc666/proj-shared/oliko/scalable/model/bert-cache", num_labels=self.num_labels)
+            model_path = os.path.join(location, "model", "bert-base-uncased")
+            self.model = BertModel(model_name=model_path, num_labels=self.num_labels)
         elif self.model_name == "gpt2":
-            self.model = GPTModel(model_name="/lustre/orion/csc666/proj-shared/oliko/scalable/model/gpt2", num_labels=self.num_labels)
+            model_path = os.path.join(location, "model", "gpt2")
+            self.model = BertModel(model_name=model_path, num_labels=self.num_labels)
         elif self.model_name == "albert-base-v2":
-            self.model = AlBertModel(model_name="/lustre/orion/csc666/proj-shared/oliko/scalable/model/albert", num_labels=self.num_labels)
+            model_path = os.path.join(location, "model", "albert")
+            self.model = BertModel(model_name=model_path, num_labels=self.num_labels)
         else:
             self.system_panic(f"Model {self.model} not supported!", fl_ctx)
             return make_reply(ReturnCode.EXECUTION_EXCEPTION)

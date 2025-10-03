@@ -14,14 +14,16 @@
 
 import torch
 from transformers import AutoModelForTokenClassification, AutoTokenizer
+import os
 
+location = os.environ.get("LOCATION")
 
 class BertModel(torch.nn.Module):
     def __init__(self, model_name, num_labels):
         super(BertModel, self).__init__()
         self.num_labels = num_labels
         self.model_name = model_name
-        self.model_name_or_path = "/lustre/orion/csc666/proj-shared/oliko/scalable/model/bert-cache"
+        self.model_name_or_path = os.path.join(location, "model", "bert-base-uncased")
         self.model = AutoModelForTokenClassification.from_pretrained(
             self.model_name_or_path, 
             num_labels=self.num_labels, 
@@ -32,7 +34,7 @@ class BertModel(torch.nn.Module):
             # attn_implementation="eager"
             # torch_dtype=torch.float32,
         )
-        self.tokenizer = AutoTokenizer.from_pretrained(self.model_name)
+        self.tokenizer = AutoTokenizer.from_pretrained(self.model_name_or_path)
 
     def forward(self, input_id, mask, label):
         output = self.model(input_ids=input_id, attention_mask=mask, labels=label, return_dict=False)
@@ -43,7 +45,7 @@ class AlBertModel(torch.nn.Module):
         super(AlBertModel, self).__init__()
         self.num_labels = num_labels
         self.model_name = model_name
-        self.model_name_or_path = "/lustre/orion/csc666/proj-shared/oliko/scalable/model/albert"
+        self.model_name_or_path = os.path.join(location, "model", "albert")
         self.model = AutoModelForTokenClassification.from_pretrained(
             self.model_name_or_path, 
             num_labels=self.num_labels, 
@@ -65,7 +67,7 @@ class GPTModel(torch.nn.Module):
         super(GPTModel, self).__init__()
         self.num_labels = num_labels
         self.model_name = model_name
-        self.model_name_or_path = "/lustre/orion/csc666/proj-shared/oliko/scalable/model/gpt2"
+        self.model_name_or_path = os.path.join(location, "model", "gpt")
         self.model = AutoModelForTokenClassification.from_pretrained(
             self.model_name_or_path,
             num_labels=self.num_labels,

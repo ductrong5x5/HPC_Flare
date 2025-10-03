@@ -66,32 +66,38 @@ Step4: submit slurm job
     ```
 - `python start_admin.py` will start the NVFlare job
 
-Step5: Multiple case
+Step5: Multiple node case - Internode
 ---
 - Case 8 clients multiple node (default)
 - Case 16 clients multiple node
     - Change `#SBATCH --nodes=3`
     - `#SBATCH --ntasks=17`
     - `export JOB_NAME=bert_ncbi_gaussian_16`
-    - `srun --ntasks=$NUM_CLIENTS --nodes=2 --ntasks-per-node=$CLIENTS_PER_NODE --gpus-per-task=1  --gpu-bind=closest setup.sh $NAME frontier client & `
+    - `srun --ntasks=$NUM_CLIENTS --nodes=2  --ntasks-per-gpu=8  --gpu-bind=closest setup.sh $NAME frontier client & `
 
 - Case 24 clients multiple node
     - Change `#SBATCH --nodes=4`
     - `#SBATCH --ntasks=25`
     - `export JOB_NAME=bert_ncbi_gaussian_24`
-    - `srun --ntasks=$NUM_CLIENTS --nodes=3 --ntasks-per-node=$CLIENTS_PER_NODE --gpus-per-task=1  --gpu-bind=closest setup.sh $NAME frontier client & `
+    - `srun --ntasks=$NUM_CLIENTS --nodes=3  --ntasks-per-gpu=8  --gpu-bind=closest setup.sh $NAME frontier client & `
 - Case 32 clients multiple node
     - Change `#SBATCH --nodes=4`
     - `#SBATCH --ntasks=33`
     - `export JOB_NAME=bert_ncbi_gaussian_32`
-    - `srun --ntasks=$NUM_CLIENTS --nodes=4 --ntasks-per-node=$CLIENTS_PER_NODE --gpus-per-task=1  --gpu-bind=closest setup.sh $NAME frontier client & `
+    - `srun --ntasks=$NUM_CLIENTS --nodes=4  --ntasks-per-gpu=8  --gpu-bind=closest setup.sh $NAME frontier client & `
 - Case 40 clients multiple node
     - Change `#SBATCH --nodes=5`
     - `#SBATCH --ntasks=41`
     - `export JOB_NAME=bert_ncbi_gaussian_40`
-    - `srun --ntasks=$NUM_CLIENTS --nodes=5 --ntasks-per-node=$CLIENTS_PER_NODE --gpus-per-task=1  --gpu-bind=closest setup.sh $NAME frontier client & `
+    - `srun --ntasks=$NUM_CLIENTS --nodes=5  --ntasks-per-gpu=8  --gpu-bind=closest setup.sh $NAME frontier client & `
 - Case 48 clients multiple node
     - Change `#SBATCH --nodes=6`
     - `#SBATCH --ntasks=49`
     - `export JOB_NAME=bert_ncbi_gaussian_48`
-    - `srun --ntasks=$NUM_CLIENTS --nodes=6 --ntasks-per-node=$CLIENTS_PER_NODE --gpus-per-task=1  --gpu-bind=closest setup.sh $NAME frontier client & `
+    - `srun --ntasks=$NUM_CLIENTS --nodes=6  --ntasks-per-gpu=8  --gpu-bind=closest setup.sh $NAME frontier client & `
+
+Step6: Intranode - multiple clients in one node
+    - Change `#SBATCH --nodes=1`
+    - `#SBATCH --ntasks=49`
+    - `export JOB_NAME=bert_ncbi_gaussian_48`
+    - `srun --ntasks=$NUM_CLIENTS --nodes=1  --ntasks-per-gpu=8  --gpu-bind=closest setup.sh $NAME frontier client & `

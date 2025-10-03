@@ -10,6 +10,8 @@ echo
 EXAMPLE_SUBDIR=$1
 NUM_GPUS=$2
 MEM_PER_GPU=$3
+echo "NUM_GPUS=$NUM_GPUS"
+echo "MEM_PER_GPU=$MEM_PER_GPU"
 READY_FILE=${4:-}
 MAX_PROCS=${MAX_PROCS:-4}   # default parallel processes
 
@@ -96,7 +98,7 @@ ls -d "$SYSTEM_NAME"/* | xargs -n1 -P"$MAX_PROCS" -I{} cp -r "$JOB_FOLDER/../../
 ls -d "$SYSTEM_NAME"/site-*/local | xargs -n1 -P"$MAX_PROCS" -I{} bash -c '
   dir="{}"
   if [ -d "$dir" ]; then
-    jq ".components |= map(if .id == \"resocurce_manager\" 
+    jq ".components |= map(if .id == \"resource_manager\" 
          then .args.num_of_gpus='$NUM_GPUS' 
          | .args.mem_per_gpu_in_GiB='$MEM_PER_GPU' else . end)" \
          "$dir/resources.json.default" > "$dir/resources.json"
@@ -105,8 +107,8 @@ ls -d "$SYSTEM_NAME"/site-*/local | xargs -n1 -P"$MAX_PROCS" -I{} bash -c '
 '
 
 # Copy comm_config.json to all local directories
-echo '{ "use_aio_grpc": true }' > comm_config.json
-ls -d "$SYSTEM_NAME"/*/local | xargs -n1 -P"$MAX_PROCS" -I{} cp comm_config.json {}
+# echo '{ "use_aio_grpc": true }' > comm_config.json
+# ls -d "$SYSTEM_NAME"/*/local | xargs -n1 -P"$MAX_PROCS" -I{} cp comm_config.json {}
 
 # Update max clients on server
 SERVER_DIR="$SYSTEM_NAME/$server_name/local"

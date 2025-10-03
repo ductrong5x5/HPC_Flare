@@ -4,7 +4,7 @@
 #SBATCH -A csc666
 #SBATCH --qos=normal 
 #SBATCH --partition=batch
-#SBATCH --time=00:05:00
+#SBATCH --time=00:10:00
 #SBATCH --output=logs/slurm_%j.out
 #SBATCH --error=logs/slurm_%j.err
 #SBATCH --nodes=2
@@ -80,8 +80,8 @@ while [ ! -f "$SERVER_READY_FILE" ]; do                 #No change
 done            
 echo "Server is ready. Starting client srun..."
 # ===== Launch clients =====
-#8 clients per node, 1 gpu per clients
-srun --ntasks=$NUM_CLIENTS --nodes=1 --ntasks-per-node=$CLIENTS_PER_NODE --gpus-per-task=1  --gpu-bind=closest setup.sh $NAME frontier client &         #No change
+#8 clients per node, 8 clients per gpu
+srun --ntasks=$NUM_CLIENTS --nodes=1 --ntasks-per-gpu=8  --gpu-bind=closest setup.sh $NAME frontier client &         #No change
  
 # # ===== Post-processing =====
 sleep 60s
