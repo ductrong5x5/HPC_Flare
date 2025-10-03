@@ -175,31 +175,5 @@ if __name__ == "__main__":
     sess.monitor_job(job_id1, cb=sample_cb, cb_run_counter={"count": 0})
     sess.download_job_result(job_id1)
 
-    data_save_dir = os.path.join(base_dir, system_name, "Data_training", job_id1)
-    os.makedirs(data_save_dir, exist_ok=True)
-
-    for i in range(1, total_clients + 1):
-        site_name = f"site-{i}"
-        log_dir = os.path.join(base_dir, system_name, site_name, job_id1, f"app_{site_name}")
-        print(f"\nProcessing {site_name}: log_dir = {log_dir}")
-        all_data = get_all_tensorflow_event_data(log_dir)
-
-        for tag in all_data.get('scalars', {}).keys():
-            print(f"  {tag}: scalar")
-        for tag in all_data.get('text', {}).keys():
-            print(f"  {tag}: text")
-
-        if 'scalars' in all_data and 'text' in all_data:
-            save_local_metrics_to_csv(
-                scalar_data=all_data['scalars'],
-                text_data=all_data['text'],
-                filename=f"{site_name}_val_local_metrics.csv",
-                path=data_save_dir
-            )
-        else:
-            print(f"No scalar or text data found for {site_name}. Skipping.")
-
-    extract_round_timings(base_dir, system_name, job_id1, data_save_dir)
-
     sess.shutdown('client')
     sess.shutdown('server')
