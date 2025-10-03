@@ -51,7 +51,7 @@ Step4: submit slurm job
 - `#SBATCH --partition=batch` Frontier has `batch` partition, feel free to change to your system
 - `#SBATCH --time=00:05:00` is for testing, your real run, I suggest 2 hour (02:00:00)
 -`#SBATCH --output=logs/slurm_%j.out #SBATCH --error=logs/slurm_%j.err` these are used to see log of output and error.
-- `#SBATCH --nodes=2` our experiments are 8, 16, 24, 32, 40, 48 clients. Since 8 clients per gpu, if we do 24 clients for example, we will do 3 node for clients, 8 clients per node, and 1 node for server, total of 4 node. In the default file, we have 2 node since the default job is for 8 clients, so 1 node for clients and 1 node for server.
+- `#SBATCH --nodes=2` our experiments are 8, 16, 24, 32, 48 clients. Since 8 clients per gpu, if we do 24 clients for example, we will do 3 node for clients, 8 clients per node, and 1 node for server, total of 4 node. In the default file, we have 2 node since the default job is for 8 clients, so 1 node for clients and 1 node for server.
 - `#SBATCH --ntasks=9` is 8 tasks for clients and 1 task for server.
 - `export LOG_LEVEL=INFO` is the output of logging for clients and server.
 - `export JOB_NAME=bert_ncbi_gaussian_8` is the job you want to start
@@ -98,11 +98,6 @@ Step5: Multiple node case - Internode
     - `#SBATCH --ntasks=33`
     - `export JOB_NAME=bert_ncbi_gaussian_32`
     - `srun --ntasks=$NUM_CLIENTS --nodes=4  --ntasks-per-gpu=8  --gpu-bind=closest setup.sh $NAME frontier client & `
-- Case 40 clients multiple node
-    - Change `#SBATCH --nodes=6`
-    - `#SBATCH --ntasks=41`
-    - `export JOB_NAME=bert_ncbi_gaussian_40`
-    - `srun --ntasks=$NUM_CLIENTS --nodes=5  --ntasks-per-gpu=8  --gpu-bind=closest setup.sh $NAME frontier client & `
 - Case 48 clients multiple node
     - Change `#SBATCH --nodes=7`
     - `#SBATCH --ntasks=49`
