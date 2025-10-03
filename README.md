@@ -105,6 +105,7 @@ Step5: Multiple node case - Internode
     - `srun --ntasks=$NUM_CLIENTS --nodes=6  --ntasks-per-gpu=8 --gpus-per-node=1 --gpu-bind=closest setup.sh $NAME frontier client & `
 
 Step6: Intranode - multiple clients in one node
+---
 - If SLurm allow multiple srun on 1 node, do like below: (example of 48 clients)
     - Change `#SBATCH --nodes=1`
     - `#SBATCH --ntasks=49`
