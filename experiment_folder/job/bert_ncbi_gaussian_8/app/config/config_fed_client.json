@@ -12,7 +12,7 @@
   "job_heartbeat_interval":150,
   "end_run_readiness_timeout":100,
   "end_run_readiness_check_interval":2,
-  "DATASET_ROOT": "/lustre/orion/csc666/proj-shared/ducnguyen/new_nvflare_edge/AMD_NVFlare/experiment_folder/data/nlp-ner",
+  "DATASET_ROOT": "/test",
   "option": "8_split",
 
   "executors": [

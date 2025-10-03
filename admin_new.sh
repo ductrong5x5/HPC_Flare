@@ -83,7 +83,11 @@ printf "%s\n" \
   | xargs -n1 -P"$MAX_PROCS" -I{} cp -r {} "$TARGET_DIR"
 
 # Copy Job Folder
-cp -r "$JOB_FOLDER" "frontier/admin@ornl.gov/transfer/"
+cp -r "$JOB_FOLDER" "$SYSTEM_NAME/admin@ornl.gov/transfer/"
+CONFIG_FILE="$SYSTEM_NAME/admin@ornl.gov/transfer/$JOB_NAME/app/config/config_fed_client.json"
+
+jq --arg loc "$LOCATION" '.DATASET_ROOT = "\($loc)/experiment_folder/data/nlp-ner"' "$CONFIG_FILE" \
+   > "$CONFIG_FILE.tmp" && mv "$CONFIG_FILE.tmp" "$CONFIG_FILE"
 
 # Copy custom code
 ls -d "$SYSTEM_NAME"/* | xargs -n1 -P"$MAX_PROCS" -I{} cp -r "$JOB_FOLDER/../../code/custom" {}

@@ -4,7 +4,7 @@
 #SBATCH -A csc666
 #SBATCH --qos=normal 
 #SBATCH --partition=batch
-#SBATCH --time=00:30:00
+#SBATCH --time=00:05:00
 #SBATCH --output=logs/slurm_%j.out
 #SBATCH --error=logs/slurm_%j.err
 #SBATCH --nodes=2
