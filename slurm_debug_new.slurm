@@ -72,7 +72,7 @@ esac
 SERVER_READY_FILE="/tmp/server_ready_${SLURM_JOB_ID}.flag"  #No change
 rm -f "$SERVER_READY_FILE"                     #No change
 
-srun --ntasks=1 --nodes=1  --cpus-per-task=1 --cpu-bind=threads --threads-per-core=2 setup.sh $NAME frontier server $GPU_COUNT $MEM_EACH_GPU "$SERVER_READY_FILE"  &        #No change
+srun --ntasks=1 --nodes=1  --cpus-per-task=1 --cpu-bind=threads setup.sh $NAME frontier server $GPU_COUNT $MEM_EACH_GPU "$SERVER_READY_FILE"  &        #No change
 
 echo "Waiting for server to signal readiness..."
 while [ ! -f "$SERVER_READY_FILE" ]; do                 #No change
