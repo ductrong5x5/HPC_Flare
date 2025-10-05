@@ -14,10 +14,6 @@ cd "$BASE_DIR" || exit 1
 # Ask total number of clients
 read -p "Enter total number of clients: " TOTAL_CLIENTS
 
-# Compute GPU index (integer division, 8 clients per GPU)
-GPU=$(( (TOTAL_CLIENTS - 1) / 8 ))
-echo "Using CUDA_VISIBLE_DEVICES=$GPU for all sites"
-
 # Activate virtual environment
 if [ -f "../python_env/env/bin/activate" ]; then
     source ../python_env/env/bin/activate
@@ -31,6 +27,9 @@ for ((i=1; i<=TOTAL_CLIENTS; i++)); do
     SITE_DIR="site-$i"
     START_SCRIPT="$SITE_DIR/startup/start.sh"
 
+    # Compute GPU index (8 clients per GPU)
+    GPU=$(( (i - 1) / 8 ))
+
     if [ -f "$START_SCRIPT" ]; then
         echo "Starting $SITE_DIR on GPU $GPU ..."
         CUDA_VISIBLE_DEVICES=$GPU bash "$START_SCRIPT" &
@@ -39,5 +38,6 @@ for ((i=1; i<=TOTAL_CLIENTS; i++)); do
     fi
 done
 
-# Wait for all background jobs
+# Wait for all background jobs to finish
 wait
+echo "All client sites finished."
